@@ -3,8 +3,11 @@
   flex-direction: column;
   justify-content: space-between;
   background-color: $royal-blue;
-  height: 100%;
+  height: 95%;
+  margin: 2rem;
   padding: 3rem;
+  border-radius: 1.6rem;
+
 
   &-body {
     display: flex;
@@ -23,6 +26,10 @@
     display: flex;
     align-self: flex-end;
     gap: 4rem;
+
+    &-next {
+      font-size: 2.2rem;
+    }
   }
 
   &_title {
@@ -33,7 +40,7 @@
 
   &_description {
     line-height: 5.5rem;
-    max-width: 50%;
+    max-width: 55%;
     font-size: 4.5rem;
     font-weight: 500;
     color: $pale-gray;
