@@ -1,13 +1,9 @@
-import {
-  ComponentType,
-  Fragment,
-  JSXElementConstructor,
-  LazyExoticComponent,
-} from 'react';
+import { Fragment } from 'react';
 import { Route, Outlet, Routes } from 'react-router-dom';
 import { AuthGuard } from 'src/guards/AuthGuard';
 import { GuestGuard } from 'src/guards/GuestGuard';
 import { Layout as MainLayout } from 'src/layout/Layout';
+import { motion } from 'framer-motion';
 export interface Route {
   path: string;
   component?: any;
@@ -46,7 +42,16 @@ export const renderRoutes = (routes: Route[]) => {
           path={path}
           element={
             <Guard>
-              <Component />
+              <motion.div
+                className="routes-transition"
+                key={path}
+                initial="initial"
+                animate="in"
+                variants={pageVariants}
+                transition={pageTransition}
+              >
+                <Component />
+              </motion.div>
             </Guard>
           }
         />
@@ -54,6 +59,24 @@ export const renderRoutes = (routes: Route[]) => {
     }
   );
 };
+
 export const setUpRoutes = (routes: Route[]) => {
   return <Routes>{renderRoutes(routes)}</Routes>;
+};
+const pageVariants = {
+  initial: {
+    opacity: 0.25,
+  },
+  in: {
+    opacity: 1,
+  },
+  out: {
+    opacity: 0.25,
+  },
+};
+
+const pageTransition = {
+  type: 'tween',
+  ease: 'linear',
+  duration: 0.5,
 };

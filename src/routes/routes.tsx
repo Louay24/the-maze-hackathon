@@ -3,6 +3,7 @@ import { PATHS } from 'src/constants/paths';
 import { AuthLayout } from 'src/pages/AuthLayout';
 import { Login } from 'src/features/Auth/Login/Login';
 import { Register } from 'src/features/Auth/Register/Register';
+import { GetStarted } from 'src/pages/GetStarted';
 export const routes: Route[] = [
   {
     layout: false,
@@ -23,5 +24,11 @@ export const routes: Route[] = [
         component: Register,
       },
     ],
+  },
+  {
+    layout: false,
+    path: PATHS.getStarted,
+    guard: 'private',
+    component: GetStarted,
   },
 ];
