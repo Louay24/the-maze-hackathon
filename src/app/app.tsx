@@ -1,14 +1,11 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.scss';
-
-import NxWelcome from './nx-welcome';
-
+import { BrowserRouter } from 'react-router-dom';
+import { routes } from 'src/routes/routes';
+import { setUpRoutes } from 'src/routes/routing';
+import './App.scss';
 export function App() {
   return (
-    <div>
-      <NxWelcome title="wayzello" />
+    <div className="App light">
+      <BrowserRouter>{setUpRoutes(routes)}</BrowserRouter>
     </div>
   );
 }
-
-export default App;

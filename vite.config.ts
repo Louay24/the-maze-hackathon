@@ -23,7 +23,11 @@ export default defineConfig({
   // worker: {
   //  plugins: [ nxViteTsPaths() ],
   // },
-
+  resolve: {
+    alias: {
+      src: '/src',
+    },
+  },
   build: {
     outDir: './dist/wayzello',
     reportCompressedSize: true,

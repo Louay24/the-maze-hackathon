@@ -1,0 +1,25 @@
+  @import './themes/light';
+  @import './themes/dark';
+
+
+
+  $themes:("light":$light, "dark":$dark);
+
+  @mixin generate-css-variables($theme) {
+    $colors: map-get($themes, $theme);
+
+    @each $color,
+    $value in $colors {
+      --#{$color}: #{$value};
+    }
+  }
+
+  @each $theme-name,
+  $theme-values in $themes {
+    .App.#{$theme-name} {
+      @include generate-css-variables($theme-name);
+    }
+  }
+
+  $royal-blue:var(--royal-blue);
+  $pale-gray:var(--pale-gray)
