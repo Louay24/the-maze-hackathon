@@ -25,7 +25,7 @@ export const GetStartedRegistration = () => {
             Back
           </Button>
           <Button
-            onClick={() => navigate(PATHS.WorkSpaceConfig)}
+            onClick={() => navigate(PATHS.WorkSpaceConfig1)}
             className="get_started-navigation-next"
           >
             Yes Absolutely !{<RightArrow />}

@@ -9,9 +9,21 @@
   align-items: center;
   justify-content: end;
 
+
+
   svg {
     transition: 0.3s ease-in;
     margin-right: 5rem;
+
+    path {
+      fill: $royal-blue;
+    }
+  }
+
+  &.primary {
+    path {
+      fill: $pale-gray;
+    }
   }
 
   &:hover {
@@ -19,4 +31,5 @@
       transform: translateX(50%);
     }
   }
+
 }

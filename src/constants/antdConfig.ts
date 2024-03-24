@@ -18,6 +18,9 @@ const useThemeConfig = () => {
           colorPrimary: (variables?.get('--royal-blue') as string[])[0],
         },
       },
+      Progress: {
+        colorBgContainer: (variables?.get('--royal-blue') as string[])[0],
+      },
     };
     setThemeConfig(themeConfig);
   }, []);

@@ -1,0 +1,15 @@
+.left_arrow-icon {
+  svg {
+    path {
+      fill: $royal-blue;
+    }
+  }
+
+  &.primary {
+    svg {
+      path {
+        fill: $pale-gray;
+      }
+    }
+  }
+}
