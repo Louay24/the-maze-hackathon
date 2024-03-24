@@ -1,0 +1,21 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+
+  &_circle {
+    border: .6rem solid $pale-gray;
+    width: 3.1rem;
+    height: 3.1rem;
+    border-radius: 50%;
+  }
+
+  &_title {
+
+
+    font-size: 3.7rem;
+    font-weight: 600;
+    color: $pale-gray;
+  }
+}

@@ -5,7 +5,7 @@ import { GuestGuard } from 'src/guards/GuestGuard';
 import { Layout as MainLayout } from 'src/layout/Layout';
 import { motion } from 'framer-motion';
 export interface Route {
-  path: string;
+  path?: string;
   component?: any;
   layout: boolean;
   guard: 'private' | 'public';
