@@ -3,4 +3,5 @@ export const PATHS = {
   getStarted: '/get-started',
   login: '/login',
   register: '/register',
+  WorkSpaceConfig: '/workspace-config',
 };

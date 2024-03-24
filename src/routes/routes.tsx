@@ -4,6 +4,7 @@ import { AuthLayout } from 'src/pages/AuthLayout';
 import { Login } from 'src/features/Auth/Login/Login';
 import { Register } from 'src/features/Auth/Register/Register';
 import { GetStarted } from 'src/pages/GetStarted';
+import { WorkSpaceConfig } from 'src/features/Registration/WorkSpaceConfig/WorkSpaceConfig';
 export const routes: Route[] = [
   {
     layout: false,
@@ -30,5 +31,11 @@ export const routes: Route[] = [
     path: PATHS.getStarted,
     guard: 'private',
     component: GetStarted,
+  },
+  {
+    layout: false,
+    path: PATHS.WorkSpaceConfig,
+    guard: 'private',
+    component: WorkSpaceConfig,
   },
 ];

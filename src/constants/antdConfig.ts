@@ -12,7 +12,10 @@ const useThemeConfig = () => {
       },
       components: {
         Button: {
+          borderRadius: 16,
           colorText: (variables?.get('--royal-blue') as string[])[0],
+          colorLink: (variables?.get('--pale-gray') as string[])[0],
+          colorPrimary: (variables?.get('--royal-blue') as string[])[0],
         },
       },
     };

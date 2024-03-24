@@ -1,7 +1,11 @@
-import { Logo } from 'src/assets/icons/logo';
+import { useNavigate } from 'react-router-dom';
+import { Logo } from 'src/assets/icons/Logo/logo';
+import { RightArrow } from 'src/assets/icons/RightArrow/RightArrow';
 import { Button } from 'src/components/Button/Button';
+import { PATHS } from 'src/constants/paths';
 
 export const GetStartedRegistration = () => {
+  const navigate = useNavigate();
   return (
     <div className="get_started">
       <Logo />
@@ -13,8 +17,19 @@ export const GetStartedRegistration = () => {
           </p>
         </div>
         <div className="get_started-navigation">
-          <Button type="link" title="Back" />
-          <Button className="get_started-navigation-next">Absolutely</Button>
+          <Button
+            onClick={() => navigate(-1)}
+            className="get_started-navigation-back"
+            type="link"
+          >
+            Back
+          </Button>
+          <Button
+            onClick={() => navigate(PATHS.WorkSpaceConfig)}
+            className="get_started-navigation-next"
+          >
+            Yes Absolutely !{<RightArrow />}
+          </Button>
         </div>
       </div>
     </div>
