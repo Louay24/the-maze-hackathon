@@ -21,6 +21,9 @@ const useThemeConfig = () => {
       Progress: {
         colorBgContainer: (variables?.get('--royal-blue') as string[])[0],
       },
+      Input: {
+        controlHeightLG: 78,
+      },
     };
     setThemeConfig(themeConfig);
   }, []);
