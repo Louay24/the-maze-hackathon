@@ -8,7 +8,7 @@ export const FormContainer = ({
   onSubmit: () => void;
 }) => {
   return (
-    <div className="auth_form_container">
+    <div className="auth_form_container fjc dir-col">
       <h1 className="auth_form_container-title">title</h1>
       <p className="auth_form_container-description">description</p>
       {children}

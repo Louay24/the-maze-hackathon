@@ -8,7 +8,7 @@ export const GetStartedRegistration = () => {
   return (
     <div className="get_started-body">
       <div className="get_started-welcome">
-        <h1 className="get_started_title">Welcome Si Louay!</h1>
+        <h1 className="get_started_title">Welcome Wahib!</h1>
         <p className="get_started_description">
           Ready to set up your workspace and organize your tasks?
         </p>

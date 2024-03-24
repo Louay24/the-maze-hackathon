@@ -11,23 +11,22 @@ import { Step3 } from 'src/features/Registration/Steps/Step3/Step3';
 import { Step4 } from 'src/features/Registration/Steps/Step4/Step4';
 import { Step5 } from 'src/features/Registration/Steps/Step5/Step5';
 import { GetStartedLayout } from 'src/features/Registration/GetStartedLayout/GetStartedLayout';
-import { StartNow } from 'src/features/Registration/StartNow/StartNow';
+import { StartNowPage } from 'src/pages/StartNowPage';
 export const routes: Route[] = [
   {
     layout: false,
-    // path: PATHS.root,
     guard: 'public',
     component: AuthLayout,
     routes: [
       {
         layout: false,
-        path: PATHS.login,
+        path: PATHS.Login,
         guard: 'public',
         component: Login,
       },
       {
         layout: false,
-        path: PATHS.register,
+        path: PATHS.Register,
         guard: 'public',
         component: Register,
       },
@@ -35,7 +34,6 @@ export const routes: Route[] = [
   },
   {
     layout: false,
-    // path: PATHS.getStarted,
     guard: 'private',
     component: GetStartedLayout,
     routes: [
@@ -49,7 +47,7 @@ export const routes: Route[] = [
         layout: false,
         path: PATHS.StartNow,
         guard: 'private',
-        component: StartNow,
+        component: StartNowPage,
       },
     ],
   },
