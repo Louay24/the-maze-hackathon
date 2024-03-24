@@ -4,10 +4,10 @@ import { routes } from 'src/routes/routes';
 
 import { setUpRoutes } from 'src/routes/routing';
 import './App.scss';
-import { ConfigProvider, ThemeConfig } from 'antd';
+import { ConfigProvider } from 'antd';
 import { useThemeConfig } from 'src/constants/antdConfig';
 
-export function App() {
+export const App = () => {
   const themeConfig = useThemeConfig();
   return (
     <ConfigProvider csp={{ nonce: 'YourNonceCode' }} theme={themeConfig}>
@@ -16,4 +16,4 @@ export function App() {
       </div>
     </ConfigProvider>
   );
-}
+};
