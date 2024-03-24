@@ -1,18 +1,12 @@
 .get_started {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: $royal-blue;
-  height: 95%;
-  margin: 2rem;
-  padding: 3rem;
-  border-radius: 1.6rem;
 
 
   &-body {
     display: flex;
     flex-direction: column;
     gap: 13rem;
+    justify-content: flex-end;
+    height: 100%;
 
   }
 

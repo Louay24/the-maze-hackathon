@@ -10,6 +10,8 @@ import { Step2 } from 'src/features/Registration/Steps/Step2/Step2';
 import { Step3 } from 'src/features/Registration/Steps/Step3/Step3';
 import { Step4 } from 'src/features/Registration/Steps/Step4/Step4';
 import { Step5 } from 'src/features/Registration/Steps/Step5/Step5';
+import { GetStartedLayout } from 'src/features/Registration/GetStartedLayout/GetStartedLayout';
+import { StartNow } from 'src/features/Registration/StartNow/StartNow';
 export const routes: Route[] = [
   {
     layout: false,
@@ -33,13 +35,26 @@ export const routes: Route[] = [
   },
   {
     layout: false,
-    path: PATHS.getStarted,
+    // path: PATHS.getStarted,
     guard: 'private',
-    component: GetStarted,
+    component: GetStartedLayout,
+    routes: [
+      {
+        layout: false,
+        path: PATHS.GetStarted,
+        guard: 'private',
+        component: GetStarted,
+      },
+      {
+        layout: false,
+        path: PATHS.StartNow,
+        guard: 'private',
+        component: StartNow,
+      },
+    ],
   },
   {
     layout: false,
-    // path: PATHS.WorkSpaceConfig,
     guard: 'private',
     component: WorkSpaceConfig,
     routes: [

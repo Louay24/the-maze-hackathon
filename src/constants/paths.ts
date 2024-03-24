@@ -1,8 +1,9 @@
 export const PATHS = {
-  root: '',
-  getStarted: '/get-started',
-  login: '/login',
-  register: '/register',
+  Root: '',
+  GetStarted: '/get-started',
+  StartNow: '',
+  Login: '/login',
+  Register: '/register',
   WorkSpaceConfig: '/workspace-config',
   WorkSpaceConfig1: '/workspace-config/1',
   WorkSpaceConfig2: '/workspace-config/1/2',
