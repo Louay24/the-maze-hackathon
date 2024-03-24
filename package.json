@@ -5,6 +5,7 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
+    "serve": "npx serve -s dist/wayzello",
     "test": "nx test",
     "prepare": "husky"
   },
