@@ -1,0 +1,130 @@
+@import "./fonts.scss";
+@import "./ClashGrotesk/Fonts/WEB/css/clash-grotesk.css";
+
+$main_color: #4c38e5;
+
+$logo_color: #f7f8f9;
+$primary_font: "ClashGrotesk-Variable", sans-serif;
+$secondary_font: "Manrope";
+
+h1 {
+  font-family: $primary_font;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 59px;
+}
+#logo {
+  font-family: $primary_font;
+  color: $logo_color;
+  font-weight: 600;
+  font-size: 37px;
+  line-height: 46px;
+}
+p {
+  font-family: $secondary_font;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+}
+h2 {
+  font-family: $primary_font;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 55px;
+}
+h3 {
+  font-family: $secondary_font;
+  color: #eef2f5;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 30px;
+}
+h4 {
+  font-family: $secondary_font;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+$margin: 26px;
+
+.main_container {
+  border-radius: 20px;
+  margin: $margin;
+  display: flex;
+  flex-direction: row;
+  width: calc(100% - #{$margin * 2});
+  max-height: calc(100vh - #{$margin * 2});
+
+}
+
+.first_container {
+  width: 60.6%;
+  background-color: $main_color;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: $margin;
+  
+}
+
+.second_container {
+  width: 39.4%;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.pic {
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; /* This creates a circle */
+  border: 4px solid white; /* Color of the circle border */
+  background-color: transparent; /* Transparent background */
+  margin-right: 10px;
+}
+.spacer {
+  margin-bottom: 100px;
+}
+
+.primaryButton{
+  appearance: none;
+  background-color:$main_color;
+  border: none;
+  color:white;
+  font-family: $secondary_font;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  padding: 10px 50px ;
+  cursor: pointer;
+  border-radius: 8px;
+  
+}
+
+.secondaryButton{
+  cursor: pointer;
+  padding: 10px 50px 10px 50px;
+  border-radius: 8px;
+  appearance: none;
+  background-color:white;
+  border: none;
+  color:$main_color;
+  font-family: $secondary_font;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 500;
+}
