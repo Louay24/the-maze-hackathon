@@ -1,4 +1,4 @@
-FROM node:21-alpine
+FROM node:21.6.1-alpine
 
 WORKDIR /app
 
@@ -8,6 +8,7 @@ RUN npm install
 
 COPY . ./
 
-EXPOSE 4200
+EXPOSE 3000
+# RUN npm run build
 
 CMD ["npm", "run", "start"]

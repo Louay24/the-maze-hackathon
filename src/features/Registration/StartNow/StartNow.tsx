@@ -4,7 +4,7 @@ import { RightArrow } from 'src/assets/icons/RightArrow/RightArrow';
 import { Button } from 'src/components/Button/Button';
 import { PATHS } from 'src/constants/paths';
 import { FireOutlined } from '@ant-design/icons';
-import people from 'src/assets/images/people.jpeg';
+import people from 'src/assets/images/people.png';
 
 export const StartNow = () => {
   const navigate = useNavigate();
