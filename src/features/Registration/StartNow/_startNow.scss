@@ -1,9 +1,8 @@
-@import './fonts.scss';
 
 .start_now {
   &-pic {
-    border-bottom-right-radius: 15px;
-    border-top-right-radius: 15px;
+    border-bottom-right-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
     height: 95%;
     position: absolute;
     right: 2rem;
@@ -12,39 +11,32 @@
     width: 40%;
   }
   &-main {
-    display: flex;
-    flex-direction: column;
     margin-right: 43%;
   }
   &-layout {
-    display: flex;
-    flex-direction: row;
     gap: 4rem;
-    align-items: center;
   }
   &-description {
-    font-family: 'Manrope';
-    color: #ffffff;
+    color: $white;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 32px;
-    margin-top: 50px;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    margin-top: 5rem;
   }
   &-spacer-top {
-    margin-top: 200px;
+    margin-top: 20rem;
   }
   &-spacer-bottom {
-    margin-bottom: 100px;
+    margin-bottom: 10rem;
   }
-  a {
+  &-reference {
     color: inherit;
   }
-  h4 {
-    font-family: 'Manrope';
-    color: #ffffff;
+  &-extra {
+    color: $white;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
   }
   
 }
