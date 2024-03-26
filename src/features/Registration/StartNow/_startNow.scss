@@ -1,0 +1,42 @@
+
+.start_now {
+  &-pic {
+    border-bottom-right-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    height: 95%;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    object-fit: cover;
+    width: 40%;
+  }
+  &-main {
+    margin-right: 43%;
+  }
+  &-layout {
+    gap: 4rem;
+  }
+  &-description {
+    color: $white;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    margin-top: 5rem;
+  }
+  &-spacer-top {
+    margin-top: 20rem;
+  }
+  &-spacer-bottom {
+    margin-bottom: 10rem;
+  }
+  &-reference {
+    color: inherit;
+  }
+  &-extra {
+    color: $white;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+  
+}
