@@ -13,10 +13,14 @@ export const FormContainer = ({
   onSubmit,
 }:FormContainerPropsType) => {
   return (
-    <div className="auth_form_container fjc dir-col">
+    <div className="auth_form fjc dir-col">
+      <div className='auth_form_container'>
+      <div className='auth_form_container-header'>
       <h1 className="auth_form_container-title">{title}</h1>
       <p className="auth_form_container-description">{description}</p>
-      {children}
+      </div>
+      <div className='auth_form-children-container'>{children}</div>
+      </div>
     </div>
   );
 };

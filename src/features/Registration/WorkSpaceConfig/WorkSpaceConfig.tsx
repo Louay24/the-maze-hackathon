@@ -34,7 +34,7 @@ export const WorkSpaceConfig = ({ children }: { children: ReactNode }) => {
         {!isAuthRoute && <Progress percent={progress[step]} showInfo={false} />}
         </div>
         <div className="get_started-body">
-          <div>{children}</div>
+          {children}
           <div className="get_started-navigation">
             {step < 5 && (
               <Button
