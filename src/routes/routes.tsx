@@ -15,25 +15,6 @@ import { StartNowPage } from 'src/pages/StartNowPage';
 export const routes: Route[] = [
   {
     layout: false,
-    guard: 'public',
-    component: AuthLayout,
-    routes: [
-      {
-        layout: false,
-        path: PATHS.Login,
-        guard: 'public',
-        component: Login,
-      },
-      {
-        layout: false,
-        path: PATHS.Register,
-        guard: 'public',
-        component: Register,
-      },
-    ],
-  },
-  {
-    layout: false,
     guard: 'private',
     component: GetStartedLayout,
     routes: [
@@ -85,7 +66,25 @@ export const routes: Route[] = [
         path: PATHS.WorkSpaceConfig5,
         guard: 'private',
         component: Step5,
-      },
+      },{
+        layout: false,
+        guard: 'public',
+        component: AuthLayout,
+        routes: [
+          {
+            layout: false,
+            path: PATHS.Login,
+            guard: 'public',
+            component: Login,
+          },
+          {
+            layout: false,
+            path: PATHS.Register,
+            guard: 'public',
+            component: Register,
+          },
+        ],
+      }
     ],
   },
 ];

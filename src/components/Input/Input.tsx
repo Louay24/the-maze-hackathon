@@ -2,7 +2,7 @@ import { Input as AntdInput, InputProps } from 'antd';
 export const Input = ({
   className = '',
   size = 'large',
-  ...props
+  ...props 
 }: InputProps) => {
   return (
     <AntdInput

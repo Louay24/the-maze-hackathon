@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { LeftArrow } from 'src/assets/icons/LeftArrow/LeftArrow';
 import { RightArrow } from 'src/assets/icons/RightArrow/RightArrow';
+import { PATHS } from 'src/constants/paths';
 
 export const WorkSpaceConfig = ({ children }: { children: ReactNode }) => {
   const navigate = useNavigate();
@@ -18,6 +19,7 @@ export const WorkSpaceConfig = ({ children }: { children: ReactNode }) => {
   };
   const step = Number(pathname.split('/')[pathname.split('/').length - 1]);
   const nextRoute = `${pathname}/${step + 1}`;
+  const isAuthRoute = pathname === PATHS.Register || pathname === PATHS.Login
   return (
     <div className="workspace_config-container fcc">
       <div className="workspace_config-layout">
@@ -29,7 +31,7 @@ export const WorkSpaceConfig = ({ children }: { children: ReactNode }) => {
           >
             <LeftArrow />
           </Button>
-          <Progress percent={progress[step]} showInfo={false} />
+        {!isAuthRoute && <Progress percent={progress[step]} showInfo={false} />}
         </div>
         <div className="get_started-body">
           <div>{children}</div>
@@ -45,13 +47,13 @@ export const WorkSpaceConfig = ({ children }: { children: ReactNode }) => {
                 {step === 1 ? 'Back' : 'Skip'}
               </Button>
             )}
-            <Button
+           { !isAuthRoute &&<Button
               onClick={() => navigate(nextRoute)}
               className="get_started-navigation-next fcc"
               type="primary"
             >
               {step === 5 ? 'Finish' : 'Next'}
-            </Button>
+            </Button>}
           </div>
         </div>
       </div>

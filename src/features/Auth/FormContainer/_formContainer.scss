@@ -1,9 +1,16 @@
 .auth_form_container {
   height: 100%;
-
+  width: 100%;
+  background-color: $pale-gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
   &-title,
   &-description {
     color: $royal-blue;
+
+    
   }
 
 }
