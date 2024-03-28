@@ -1,12 +1,15 @@
 .get_started {
 
+  height: 100%;
+  width: 100%;
 
   &-body {
     display: flex;
     flex-direction: column;
-    gap: 13rem;
+    gap: 10rem;
     justify-content: flex-end;
     height: 100%;
+    width: 100%;
 
   }
 
@@ -43,13 +46,14 @@
     }
   }
 
-  &_title {
+  &-title {
     font-size: 4.5rem;
     font-weight: 600;
     color: $pale-gray;
+
   }
 
-  &_description {
+  &-description {
     line-height: 5rem;
     max-width: 55%;
     font-size: 4rem;

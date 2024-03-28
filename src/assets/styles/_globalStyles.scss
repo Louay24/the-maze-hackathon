@@ -4,6 +4,12 @@
   justify-content: center;
 }
 
+.fcs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .fac {
   display: flex;
   align-items: center;
@@ -19,6 +25,10 @@
 }
 
 
-.g-1 {
+.g-4 {
   gap: 4rem;
+}
+
+.grotesk {
+  font-family: 'Clash Grotesk';
 }

@@ -1,5 +1,5 @@
 export const PATHS = {
-  Root: '',
+  Root: '/',
   GetStarted: '/get-started',
   StartNow: '',
   Login: '/login',
