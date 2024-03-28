@@ -2,7 +2,6 @@ import { Button, Input, Progress } from 'antd';
 import { ReactNode } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { LeftArrow } from 'src/assets/icons/LeftArrow/LeftArrow';
-import { RightArrow } from 'src/assets/icons/RightArrow/RightArrow';
 
 export const WorkSpaceConfig = ({ children }: { children: ReactNode }) => {
   const navigate = useNavigate();

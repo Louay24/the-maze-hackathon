@@ -10,7 +10,7 @@ const useThemeConfig = () => {
 
     const themeConfig = {
       token: {
-        fontFamily: 'Manrope, sans serif',
+        fontFamily: 'Manrope',
         sizeUnit: 10,
         fontSize: 20,
       },

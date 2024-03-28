@@ -43,7 +43,7 @@ export const renderRoutes = (routes: Route[]) => {
           element={
             <Guard>
               <motion.div
-                className="routes-transition "
+                className="routes-transition  "
                 key={path}
                 initial="initial"
                 animate="in"

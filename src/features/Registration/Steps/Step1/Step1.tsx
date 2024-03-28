@@ -3,7 +3,7 @@ import { StepDetails } from '../../components/StepDetails/StepDetails';
 
 export const Step1 = () => {
   return (
-    <div className="step-1 fjc dir-col g-1 ">
+    <div className="step-1 fjc dir-col g-4">
       <StepDetails
         title="Create your first workspace"
         description="Your first workspace needs a name"

@@ -1,13 +1,15 @@
 .step_details {
   &-title {
     font-weight: 600;
-    font-size: 4rem;
+    font-size: 5rem;
     color: $royal-blue;
+    font-family: $grotesk-font;
   }
 
   &-description {
     font-weight: 500;
-    font-size: 3.5rem;
+    font-family: $grotesk-font;
+    font-size: 4.5rem;
     color: $royal-blue;
   }
 }
