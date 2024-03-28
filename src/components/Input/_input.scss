@@ -1,9 +1,12 @@
+
 .antd_input {
+  border: 1px $light-pale-gray solid;
+  border-radius: 1rem;
+  width: 100%;
   &.ant-input-borderless {
     background-color: $white;
   }
-
   &.ant-input-lg {
-    height: 7.8rem;
+    height:5.8rem;
   }
 }
