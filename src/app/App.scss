@@ -1,6 +1,7 @@
 @import '../assets';
 @import '../features';
 @import '../components';
+@import '../layout';
 
 
 html {
@@ -23,9 +24,14 @@ html {
 .App {
   height: 100vh;
   background-color: $pale-gray;
+  overflow: hidden;
 }
 
 .routes-transition {
   height: 100%;
   display: flex;
+}
+
+.primary {
+  color: $royal-blue;
 }

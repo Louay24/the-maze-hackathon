@@ -1,0 +1,28 @@
+.navbar {
+  height: 9.4rem;
+  min-height: 9.4rem;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+
+  &_search {
+    height: 5.5rem;
+    padding: 1.25rem .875rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    max-width: 50rem;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 98%;
+    height: 1px;
+    background-color: $light-slight-gray;
+    position: absolute;
+    bottom: 0;
+  }
+}

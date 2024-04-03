@@ -10,4 +10,12 @@ export const PATHS = {
   WorkSpaceConfig3: '/workspace-config/1/2/3',
   WorkSpaceConfig4: '/workspace-config/1/2/3/4',
   WorkSpaceConfig5: '/workspace-config/1/2/3/4/5',
+  Dashboard: '/dashboard',
+  Spaces: '/spaces',
+  Chat: '/chat',
+  Brainstorming: '/brainstorming',
+  Calendar: '/calendar',
+  TimeTracking: '/timeTracking',
+  ReportGeneration: '/reportGeneration',
+  Settings: '/settings',
 };

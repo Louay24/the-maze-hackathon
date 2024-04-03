@@ -9,6 +9,10 @@
     width: 3.1rem;
     height: 3.1rem;
     border-radius: 50%;
+
+    &.primary {
+      border: .6rem solid $royal-blue;
+    }
   }
 
   &_title {
@@ -16,5 +20,7 @@
     font-weight: 600;
 
     color: $pale-gray;
+
+
   }
 }

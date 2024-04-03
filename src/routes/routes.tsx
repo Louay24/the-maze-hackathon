@@ -12,20 +12,35 @@ import { Step4 } from 'src/features/Registration/Steps/Step4/Step4';
 import { Step5 } from 'src/features/Registration/Steps/Step5/Step5';
 import { GetStartedLayout } from 'src/features/Registration/GetStartedLayout/GetStartedLayout';
 import { StartNowPage } from 'src/pages/StartNowPage';
+import { Layout, layoutKey } from 'src/layout/Layout';
+import { DashboardIcon } from 'src/assets/icons/DashboardIcon/DashboardIcon';
+import { SpacesIcon } from 'src/assets/icons/SpacesIcon/SpacesIcon';
+import { UnderConstruction } from 'src/assets/icons/UnderConstruction';
+import { Dashboard } from 'src/pages/Dashboard';
+import { Spaces } from 'src/pages/Spaces';
+import { Chat } from 'src/pages/Chat';
+import { ChatIcon } from 'src/assets/icons/ChatIcon/ChatIcon';
+import { BrainstormingIcon } from 'src/assets/icons/BrainstormingIcon/BrainstormingIcon';
+import { Brainstorming } from 'src/pages/Brainstorming';
+import { CalendarIcon } from 'src/assets/icons/CalendarIcon/CalendarIcon';
+import { Calendar } from 'src/pages/Calendar';
+import { TimeTracking } from 'src/pages/TimeTracking';
+import { TimeTrackingIcon } from 'src/assets/icons/TimeTrackingIcon/TimeTrackingIcon';
+import { ReportGeneration } from 'src/pages/ReportGeneration';
+import { ReportGenerationIcon } from 'src/assets/icons/ReportGenerationIcon/ReportGeneration';
+import { SettingsIcon } from 'src/assets/icons/SettingsIcon/SettingsIcon';
+import { Settings } from 'src/pages/Settings';
 export const routes: Route[] = [
   {
-    layout: false,
     guard: 'private',
     component: GetStartedLayout,
     routes: [
       {
-        layout: false,
         path: PATHS.GetStarted,
         guard: 'private',
         component: GetStarted,
       },
       {
-        layout: false,
         path: PATHS.StartNow,
         guard: 'private',
         component: StartNowPage,
@@ -33,58 +48,121 @@ export const routes: Route[] = [
     ],
   },
   {
-    layout: false,
     guard: 'private',
     component: WorkSpaceConfig,
     routes: [
       {
-        layout: false,
         path: PATHS.WorkSpaceConfig1,
         guard: 'private',
         component: Step1,
       },
       {
-        layout: false,
         path: PATHS.WorkSpaceConfig2,
         guard: 'private',
         component: Step2,
       },
       {
-        layout: false,
         path: PATHS.WorkSpaceConfig3,
         guard: 'private',
         component: Step3,
       },
       {
-        layout: false,
         path: PATHS.WorkSpaceConfig4,
         guard: 'private',
         component: Step4,
       },
       {
-        layout: false,
         path: PATHS.WorkSpaceConfig5,
         guard: 'private',
         component: Step5,
-      },{
-        layout: false,
+      },
+      {
         guard: 'public',
         component: AuthLayout,
         routes: [
           {
-            layout: false,
             path: PATHS.Login,
             guard: 'public',
             component: Login,
           },
           {
-            layout: false,
             path: PATHS.Register,
             guard: 'public',
             component: Register,
           },
         ],
-      }
+      },
+    ],
+  },
+  {
+    guard: 'private',
+    key: layoutKey,
+    component: Layout,
+    routes: [
+      {
+        path: PATHS.Dashboard,
+        guard: 'private',
+        showInMenu: true,
+        label: 'Dashboard',
+        component: Dashboard,
+        icon: <DashboardIcon />,
+      },
+      {
+        path: PATHS.Spaces,
+        guard: 'private',
+        showInMenu: true,
+        label: 'Spaces',
+        component: Spaces,
+        icon: <SpacesIcon />,
+      },
+      {
+        path: PATHS.Chat,
+        guard: 'private',
+        showInMenu: true,
+        label: 'Chat',
+        component: Chat,
+        icon: <ChatIcon />,
+      },
+      {
+        path: PATHS.Brainstorming,
+        guard: 'private',
+        showInMenu: true,
+        label: 'Brainstorming',
+        component: Brainstorming,
+        icon: <BrainstormingIcon />,
+      },
+      {
+        path: PATHS.Calendar,
+        guard: 'private',
+        showInMenu: true,
+        label: 'Calendar',
+        component: Calendar,
+        icon: <CalendarIcon />,
+      },
+      {
+        path: PATHS.TimeTracking,
+        guard: 'private',
+        showInMenu: true,
+        label: 'Time Tracking',
+        component: TimeTracking,
+        icon: <TimeTrackingIcon />,
+      },
+      {
+        path: PATHS.ReportGeneration,
+        guard: 'private',
+        showInMenu: true,
+        label: 'Report Generation',
+        component: ReportGeneration,
+        icon: <ReportGenerationIcon />,
+      },
+      {
+        path: PATHS.Settings,
+        guard: 'private',
+        showInMenu: true,
+        label: 'Settings',
+        component: Settings,
+        icon: <SettingsIcon />,
+      },
     ],
   },
 ];
