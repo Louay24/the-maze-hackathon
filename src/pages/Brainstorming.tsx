@@ -1,4 +1,4 @@
-import underConstruction from '../assets/icons/UnderConstruction.svg';
+import underConstruction from 'src/assets/icons/UnderConstruction.svg';
 
 export const Brainstorming = () => {
   return (
