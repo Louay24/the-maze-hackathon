@@ -13,6 +13,8 @@
   }
 
   .ant-menu-item {
+    width: 100%;
+    padding-right: 2rem;
     gap: 1.6rem;
     color: $royal-blue;
     background-color: transparent;
@@ -56,8 +58,37 @@
 
   }
 
-  &-sider {
+  .ant-layout-sider-trigger {
+    background-color: $pure-white;
+    color: $royal-blue;
+    font-size: 2rem;
 
+  }
+
+
+
+  &-sider {
+    &-select {
+      background-color: $pale-gray;
+      padding: 2.5rem 0;
+      height: 5.6rem;
+      border-radius: 1rem;
+   
+    }
+
+    &-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    &-workspace {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2.4rem 0 0 0;
+    }
 
     &-header {
       background-color: $pure-white;
@@ -83,6 +114,10 @@
       width: 100%;
       display: flex;
       flex-direction: column;
+    }
+
+    &-breadcrumb {
+      padding: 3rem 2rem;
     }
 
     &-content {

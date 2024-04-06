@@ -9,6 +9,8 @@ html {
   box-sizing: border-box;
   text-decoration: none;
   font-size: 62.5%;
+
+
 }
 
 * {
@@ -18,10 +20,15 @@ html {
   padding: 0;
   outline: none;
   border: none;
+  user-select: none;
+  font-weight: 400;
+  text-decoration: none;
+
 }
 
 
 .App {
+
   height: 100vh;
   background-color: $pale-gray;
   overflow: hidden;

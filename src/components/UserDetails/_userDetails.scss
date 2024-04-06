@@ -1,0 +1,23 @@
+.user_details {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  gap: 1.2rem;
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+
+    &-name {
+      color: $midnight-blue;
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+
+    &-position {
+      color: $slate-blue;
+      font-size: 1.4rem;
+      font-weight: 400;
+    }
+  }
+}

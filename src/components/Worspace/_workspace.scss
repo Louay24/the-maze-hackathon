@@ -1,0 +1,12 @@
+.workspace_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+
+  &-title {
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: $royal-blue;
+  }
+}

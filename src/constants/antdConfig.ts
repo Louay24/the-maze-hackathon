@@ -11,8 +11,8 @@ const useThemeConfig = () => {
     const themeConfig = {
       token: {
         fontFamily: 'Manrope',
-        sizeUnit: 10,
-        fontSize: 20,
+        sizeUnit: 4,
+        fontSize: 16,
       },
 
       components: {
@@ -25,16 +25,24 @@ const useThemeConfig = () => {
             variables?.get('--royal-blue-hover') as string[]
           )[0],
         },
-      },
-      Layout: {
-        siderBg: (variables?.get('--pure-white') as string[])[0],
-      },
-      Progress: {
-        colorBgContainer: (variables?.get('--royal-blue') as string[])[0],
-      },
+        Tooltip: {
+          colorBgSpotlight: (variables?.get('--pure-white') as string[])[0],
+          fontSize: 15,
+          paddingSM: 15,
+          colorTextLightSolid: (
+            variables?.get('--midnight-blue') as string[]
+          )[0],
+        },
+        Layout: {
+          siderBg: (variables?.get('--pure-white') as string[])[0],
+        },
+        Progress: {
+          colorBgContainer: (variables?.get('--royal-blue') as string[])[0],
+        },
 
-      Input: {
-        controlHeightLG: 78,
+        Input: {
+          controlHeightLG: 78,
+        },
       },
     };
 

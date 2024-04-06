@@ -1,0 +1,12 @@
+.icon-box {
+  background-color: $pure-white;
+  min-width: 5.5rem;
+
+  height: 5.5rem;
+  border: 1px var(--light-pale-gray) solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  cursor: pointer;
+}

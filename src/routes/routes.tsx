@@ -15,7 +15,6 @@ import { StartNowPage } from 'src/pages/StartNowPage';
 import { Layout, layoutKey } from 'src/layout/Layout';
 import { DashboardIcon } from 'src/assets/icons/DashboardIcon/DashboardIcon';
 import { SpacesIcon } from 'src/assets/icons/SpacesIcon/SpacesIcon';
-import { UnderConstruction } from 'src/assets/icons/UnderConstruction';
 import { Dashboard } from 'src/pages/Dashboard';
 import { Spaces } from 'src/pages/Spaces';
 import { Chat } from 'src/pages/Chat';
@@ -30,6 +29,7 @@ import { ReportGeneration } from 'src/pages/ReportGeneration';
 import { ReportGenerationIcon } from 'src/assets/icons/ReportGenerationIcon/ReportGeneration';
 import { SettingsIcon } from 'src/assets/icons/SettingsIcon/SettingsIcon';
 import { Settings } from 'src/pages/Settings';
+import { Number } from 'src/components/Number/Number';
 export const routes: Route[] = [
   {
     guard: 'private',
@@ -103,7 +103,7 @@ export const routes: Route[] = [
         path: PATHS.Dashboard,
         guard: 'private',
         showInMenu: true,
-        label: 'Dashboard',
+        label: 'dashboard',
         component: Dashboard,
         icon: <DashboardIcon />,
       },
@@ -111,23 +111,44 @@ export const routes: Route[] = [
         path: PATHS.Spaces,
         guard: 'private',
         showInMenu: true,
-        label: 'Spaces',
+        label: 'spaces',
         component: Spaces,
         icon: <SpacesIcon />,
+        routes: [
+          {
+            path: '/spaces/ss',
+            guard: 'private',
+            showInMenu: true,
+            label: 'ss',
+            component: Spaces,
+            icon: <SpacesIcon />,
+            routes: [
+              {
+                path: '/spaces/ss/rr',
+                guard: 'private',
+                showInMenu: true,
+                label: 'rr',
+                component: Spaces,
+                icon: <SpacesIcon />,
+              },
+            ],
+          },
+        ],
       },
       {
         path: PATHS.Chat,
         guard: 'private',
         showInMenu: true,
-        label: 'Chat',
+        label: 'chat',
         component: Chat,
         icon: <ChatIcon />,
+        suffix: <Number color="blue" content="3" />,
       },
       {
         path: PATHS.Brainstorming,
         guard: 'private',
         showInMenu: true,
-        label: 'Brainstorming',
+        label: 'brainstorming',
         component: Brainstorming,
         icon: <BrainstormingIcon />,
       },
@@ -135,7 +156,7 @@ export const routes: Route[] = [
         path: PATHS.Calendar,
         guard: 'private',
         showInMenu: true,
-        label: 'Calendar',
+        label: 'calendar',
         component: Calendar,
         icon: <CalendarIcon />,
       },
@@ -143,15 +164,16 @@ export const routes: Route[] = [
         path: PATHS.TimeTracking,
         guard: 'private',
         showInMenu: true,
-        label: 'Time Tracking',
+        label: 'timeTracking',
         component: TimeTracking,
         icon: <TimeTrackingIcon />,
+        suffix: <Number color="red" content="01:56" />,
       },
       {
         path: PATHS.ReportGeneration,
         guard: 'private',
         showInMenu: true,
-        label: 'Report Generation',
+        label: 'reportGeneration',
         component: ReportGeneration,
         icon: <ReportGenerationIcon />,
       },
@@ -159,7 +181,7 @@ export const routes: Route[] = [
         path: PATHS.Settings,
         guard: 'private',
         showInMenu: true,
-        label: 'Settings',
+        label: 'settings',
         component: Settings,
         icon: <SettingsIcon />,
       },

@@ -13,6 +13,7 @@ export interface Route {
   guard: 'private' | 'public';
   routes?: Route[];
   index?: boolean;
+  suffix?: ReactNode;
 }
 export const renderRoutes = (routes: Route[]) => {
   return routes?.map(({ path, component, guard, routes, index, ...props }) => {

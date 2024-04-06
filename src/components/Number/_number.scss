@@ -1,0 +1,26 @@
+.number_container {
+  border-radius: 2.2rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  &.red {
+    background-color: $color-red;
+    padding: 0 1rem;
+  }
+
+  &.blue {
+    background-color: $royal-blue;
+    padding: 0 1.2rem;
+  }
+
+  &-content {
+    color: $pure-white;
+    font-size: 1.4rem;
+
+
+  }
+
+}

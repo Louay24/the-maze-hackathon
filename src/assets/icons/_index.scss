@@ -1,4 +1,16 @@
 @import './Logo/logo';
 @import "./RightArrow/rightArrow";
 @import './LeftArrow/leftArrow';
-@import './SearchIcon/searchIcon'
+@import './SearchIcon/searchIcon';
+
+.fill-slate-blue {
+  fill: $slate-blue;
+}
+
+.fill-midnight-blue {
+  fill: $midnight-blue;
+}
+
+.fill-royal-blue {
+  fill: $royal-blue;
+}

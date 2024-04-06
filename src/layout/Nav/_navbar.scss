@@ -8,6 +8,13 @@
   justify-content: space-between;
   padding: 2rem;
 
+  &_right {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    gap: 0.9rem;
+  }
+
   &_search {
     height: 5.5rem;
     padding: 1.25rem .875rem;
