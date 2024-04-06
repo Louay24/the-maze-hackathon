@@ -1,0 +1,10 @@
+ .spaces {
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+
+   &_toolbar {
+     display: flex;
+     gap: 1rem;
+   }
+ }

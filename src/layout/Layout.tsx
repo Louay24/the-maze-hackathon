@@ -84,14 +84,14 @@ export const Layout = ({ children }: { children: ReactNode }) => {
             className="main_layout-sider-select"
             defaultValue={'wayzello'}
             suffixIcon={<BottomArrow className="fill-royal-blue" />}
-            labelRender={({ value, label }) => (
+            labelRender={({ label }) => (
               <Workspace
                 onlyIcon={collapsed}
                 title={label.title}
                 src={label.image}
               />
             )}
-            optionRender={({ value, label }) => (
+            optionRender={({ label }) => (
               <Workspace
                 onlyIcon={collapsed}
                 title={label.title}

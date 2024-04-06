@@ -1,0 +1,30 @@
+.space {
+  border-radius: 1rem;
+  height: 12rem;
+  padding: 1.2rem;
+  display: flex;
+  background-color: $pure-white;
+  max-width: 56.5rem;
+  border: 1px $light-pale-gray solid;
+  gap: 1.5rem;
+
+  &-informations {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &_name {
+    color: $midnight-blue;
+    font-size: 1.8rem;
+  }
+
+  &_image {
+    border-radius: 1rem;
+  }
+
+  &_rest-users {
+    background-color: $slate-blue;
+    color: $pure-white;
+  }
+}

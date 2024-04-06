@@ -1,0 +1,23 @@
+.outline_status {
+  width: .7rem;
+  height: .7rem;
+  border-radius: 50%;
+  border: .1rem $pure-white solid;
+
+  &.todo {
+    background-color: $slate-blue;
+    outline: $slate-blue solid 1px;
+  }
+
+  &.inprogress {
+    background-color: $color-purple;
+    outline: $color-purple solid 1px;
+  }
+
+  &.completed {
+    background-color: $color-green;
+    outline: $color-green solid 1px;
+  }
+
+
+}
