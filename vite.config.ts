@@ -2,6 +2,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
+import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
   root: __dirname,
@@ -17,7 +18,51 @@ export default defineConfig({
     host: 'localhost',
   },
 
-  plugins: [react(), nxViteTsPaths()],
+  plugins: [
+    react(),
+    nxViteTsPaths(),
+    VitePWA({
+      workbox: {
+        globPatterns: ['**/*'],
+      },
+
+      includeAssets: ['**/*'],
+      manifest: {
+        name: 'Wayzello',
+        short_name: 'Wayzello',
+        start_url: '/',
+        display: 'fullscreen',
+        background_color: '#F7F8F9',
+        lang: 'en',
+        scope: '/',
+        theme_color: '#F7F8F9',
+        description: 'Wayzello is a project management tool for teams.',
+        icons: [
+          {
+            src: '/icon-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: '/icon-256x256.png',
+            sizes: '256x256',
+            type: 'image/png',
+          },
+          {
+            src: '/icon-384x384.png',
+            sizes: '384x384',
+            type: 'image/png',
+          },
+          {
+            src: '/icon-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+        ],
+        dir: 'ltr',
+      },
+    }),
+  ],
 
   // Uncomment this if you are using workers.
   // worker: {

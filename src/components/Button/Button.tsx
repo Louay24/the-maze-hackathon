@@ -7,7 +7,7 @@ interface Button extends ButtonProps {
 }
 export const Button = ({ title, children, ...props }: Button) => {
   return (
-    <AntdButton title={title} {...props}>
+    <AntdButton className="btn" title={title} {...props}>
       {children && children}
     </AntdButton>
   );

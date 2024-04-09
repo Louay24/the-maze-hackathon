@@ -1,7 +1,7 @@
 import { ReactNode, useReducer } from 'react';
 import { Layout as AntdLayout, Breadcrumb, Menu, Select, Tooltip } from 'antd';
 import { routes } from 'src/routes/routes';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Logo } from 'src/assets/icons/Logo/logo';
 import { Navbar } from './Nav/Navbar';
 import { useLanguage } from 'src/providers/translation/LanguageContext';
@@ -87,15 +87,15 @@ export const Layout = ({ children }: { children: ReactNode }) => {
             labelRender={({ label }) => (
               <Workspace
                 onlyIcon={collapsed}
-                title={label.title}
-                src={label.image}
+                title={label?.title}
+                src={label?.image}
               />
             )}
             optionRender={({ label }) => (
               <Workspace
                 onlyIcon={collapsed}
-                title={label.title}
-                src={label.image}
+                title={label?.title}
+                src={label?.image}
               />
             )}
             options={[

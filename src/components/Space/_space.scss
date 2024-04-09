@@ -4,9 +4,10 @@
   padding: 1.2rem;
   display: flex;
   background-color: $pure-white;
-  max-width: 56.5rem;
   border: 1px $light-pale-gray solid;
   gap: 1.5rem;
+  width: 50vw;
+  margin-right: .5rem;
 
   &-informations {
     display: flex;
