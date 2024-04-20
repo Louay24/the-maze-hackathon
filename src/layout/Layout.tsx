@@ -16,8 +16,9 @@ const { Sider } = AntdLayout;
 export const layoutKey = 'main_layout';
 export enum themes {
   healthCare = 'healthCare',
-  leaks = 'leaks',
+  bi = 'bi',
   industry = 'industry',
+  agriculture = 'agriculture',
 }
 export const Layout = ({ children }: { children: ReactNode }) => {
   const [themeParams, setThemeParams] = useSearchParams();
@@ -173,9 +174,9 @@ const options = [
     },
   },
   {
-    value: themes.leaks,
+    value: themes.bi,
     label: {
-      title: 'Leaks',
+      title: 'Bi',
       image: 'https://logopond.com/logos/c336f8bb2835274f5e350dd3e683ee4d.png',
     },
   },
@@ -183,6 +184,13 @@ const options = [
     value: themes.industry,
     label: {
       title: 'industrie 4.0',
+      image: 'https://logopond.com/logos/c336f8bb2835274f5e350dd3e683ee4d.png',
+    },
+  },
+  {
+    value: themes.agriculture,
+    label: {
+      title: 'agriculture',
       image: 'https://logopond.com/logos/c336f8bb2835274f5e350dd3e683ee4d.png',
     },
   },
