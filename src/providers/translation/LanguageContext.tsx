@@ -10,7 +10,6 @@ import { DEFAULT_LANG } from './config';
 import translate from './utils';
 import { getCookie, setCookie } from 'src/utils/cookies';
 import { getPathByString } from 'src/utils/getPathByString';
-import { error } from 'console';
 
 type LanguageContextType = {
   selectedLanguage: Languages;

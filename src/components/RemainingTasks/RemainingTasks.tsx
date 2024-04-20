@@ -1,4 +1,3 @@
-import { useLanguage } from 'src/providers/translation/LanguageContext';
 import { OutlinedStatus } from '../OutlinedStatus/OutlinedStatus';
 
 export const RemainingTasks = ({
@@ -8,8 +7,7 @@ export const RemainingTasks = ({
   status: 'todo' | 'completed' | 'inprogress';
   numberOfTasks: number;
 }) => {
-  const { t } = useLanguage();
-  const phrase = `${numberOfTasks} ${t('tasks')} ${
+  const phrase = `${numberOfTasks} ${'tasks'} ${
     status === 'todo'
       ? 'to do'
       : status === 'completed'

@@ -9,7 +9,6 @@ import {
 } from 'react-router-dom';
 import { Logo } from 'src/assets/icons/Logo/logo';
 import { Navbar } from './Nav/Navbar';
-import { useLanguage } from 'src/providers/translation/LanguageContext';
 import { Workspace } from 'src/components/Worspace/Workspace';
 import { BottomArrow } from 'src/assets/icons/BottomArrow/BottomArrow';
 
@@ -25,7 +24,6 @@ export const Layout = ({ children }: { children: ReactNode }) => {
     ? themes[themeParams.get('theme') as unknown as string] ?? themes.healthCare
     : themes.healthCare;
 
-  const { t } = useLanguage();
   const { pathname } = useLocation();
   const navigate = useNavigate();
   const [collapsed, toggleCollapsed] = useReducer(
@@ -57,7 +55,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
     .map(({ icon, path, label, suffix, theme }) => {
       const labelItem = (
         <div className="main_layout-sider-label">
-          {t(label)}
+          {label}
           {suffix && suffix}
         </div>
       );
