@@ -6,10 +6,10 @@ import { ChatIcon } from 'src/assets/icons/ChatIcon/ChatIcon';
 
 import { MdOutlineDashboardCustomize } from 'react-icons/md';
 
-import { Number } from 'src/components/Number/Number';
 import { Paths } from 'src/constants/paths';
-import { Calculator } from 'src/pages/Calculator';
+import C18 from 'src/features/Challange_1';
 import { Chart } from 'src/pages/Chart';
+import { Calculator } from 'src/pages/Calculator';
 export const routes: Route[] = [
   {
     guard: 'public',
@@ -25,16 +25,16 @@ export const routes: Route[] = [
         component: Dashboard,
         icon: <MdOutlineDashboardCustomize />,
       },
-
       {
-        path: Paths.calculator,
+        path: Paths.Project1,
         guard: 'public',
         showInMenu: true,
-        theme: themes.industry,
-        label: 'calculator',
-        component: Calculator,
+        theme: themes.healthCare,
+        label: '#18',
+        component: C18,
         icon: <MdOutlineDashboardCustomize />,
       },
+
       {
         path: Paths.chart,
         guard: 'public',
@@ -42,6 +42,15 @@ export const routes: Route[] = [
         theme: themes.industry,
         label: 'chart',
         component: Chart,
+        icon: <MdOutlineDashboardCustomize />,
+      },
+      {
+        path: Paths.calculator,
+        guard: 'public',
+        showInMenu: true,
+        theme: themes.industry,
+        label: 'calculator',
+        component: Calculator,
         icon: <MdOutlineDashboardCustomize />,
       },
     ],
