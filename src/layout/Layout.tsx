@@ -1,5 +1,5 @@
 import { ReactNode, useEffect, useReducer } from 'react';
-import { Layout as AntdLayout, Breadcrumb, Menu, Select, Tooltip } from 'antd';
+import { Layout as AntdLayout, Menu, Select, Tooltip } from 'antd';
 import { routes } from 'src/routes/routes';
 import {
   createSearchParams,
