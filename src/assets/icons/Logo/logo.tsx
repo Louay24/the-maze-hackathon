@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { PATHS } from 'src/constants/paths';
+import { Paths } from 'src/constants/paths';
 
 export const Logo = ({
   title = true,
@@ -9,7 +9,7 @@ export const Logo = ({
   type?: 'primary' | 'secondary';
 }) => {
   return (
-    <Link to={PATHS.Root}>
+    <Link to={Paths.Root}>
       <div className="logo">
         <div className={`logo_circle ${type ?? ''}`}></div>
         {title && (

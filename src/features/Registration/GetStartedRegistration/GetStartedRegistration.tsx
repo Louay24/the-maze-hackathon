@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { RightArrow } from 'src/assets/icons/RightArrow/RightArrow';
 import { Button } from 'src/components/Button/Button';
-import { PATHS } from 'src/constants/paths';
+import { Paths } from 'src/constants/paths';
 
 export const GetStartedRegistration = () => {
   const navigate = useNavigate();
@@ -22,7 +22,7 @@ export const GetStartedRegistration = () => {
           Back
         </Button>
         <Button
-          onClick={() => navigate(PATHS.WorkSpaceConfig1)}
+          onClick={() => navigate(Paths.WorkspaceConfig1)}
           className="get_started-navigation-next"
         >
           Yes Absolutely !{<RightArrow />}

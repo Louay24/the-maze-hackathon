@@ -1,8 +1,8 @@
-import { Button, Input, Progress } from 'antd';
+import { Button, Progress } from 'antd';
 import { ReactNode } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { LeftArrow } from 'src/assets/icons/LeftArrow/LeftArrow';
-import { PATHS } from 'src/constants/paths';
+import { Paths } from 'src/constants/paths';
 
 export const WorkSpaceConfig = ({ children }: { children: ReactNode }) => {
   const navigate = useNavigate();
@@ -17,8 +17,8 @@ export const WorkSpaceConfig = ({ children }: { children: ReactNode }) => {
     5: 100,
   };
   const step = Number(pathname.split('/')[pathname.split('/').length - 1]);
-  const nextRoute = step === 5 ? PATHS.Dashboard : `${pathname}/${step + 1}`;
-  const isAuthRoute = pathname === PATHS.Register || pathname === PATHS.Login
+  const nextRoute = step === 5 ? Paths.Dashboard : `${pathname}/${step + 1}`;
+  const isAuthRoute = pathname === Paths.Register || pathname === Paths.Login;
   return (
     <div className="workspace_config-container fcc">
       <div className="workspace_config-layout">
@@ -30,7 +30,9 @@ export const WorkSpaceConfig = ({ children }: { children: ReactNode }) => {
           >
             <LeftArrow />
           </Button>
-        {!isAuthRoute && <Progress percent={progress[step]} showInfo={false} />}
+          {!isAuthRoute && (
+            <Progress percent={progress[step]} showInfo={false} />
+          )}
         </div>
         <div className="get_started-body">
           {children}
@@ -46,13 +48,15 @@ export const WorkSpaceConfig = ({ children }: { children: ReactNode }) => {
                 {step === 1 ? 'Back' : 'Skip'}
               </Button>
             )}
-           { !isAuthRoute &&<Button
-              onClick={() => navigate(nextRoute)}
-              className="get_started-navigation-next fcc"
-              type="primary"
-            >
-              {step === 5 ? 'Finish' : 'Next'}
-            </Button>}
+            {!isAuthRoute && (
+              <Button
+                onClick={() => navigate(nextRoute)}
+                className="get_started-navigation-next fcc"
+                type="primary"
+              >
+                {step === 5 ? 'Finish' : 'Next'}
+              </Button>
+            )}
           </div>
         </div>
       </div>

@@ -1,5 +1,4 @@
 import { Route } from './routing';
-import { PATHS } from 'src/constants/paths';
 import { AuthLayout } from 'src/pages/AuthLayout';
 import { Login } from 'src/features/Auth/Login/Login';
 import { Register } from 'src/features/Auth/Register/Register';
@@ -30,18 +29,19 @@ import { ReportGenerationIcon } from 'src/assets/icons/ReportGenerationIcon/Repo
 import { SettingsIcon } from 'src/assets/icons/SettingsIcon/SettingsIcon';
 import { Settings } from 'src/pages/Settings';
 import { Number } from 'src/components/Number/Number';
+import { Paths } from 'src/constants/paths';
 export const routes: Route[] = [
   {
     guard: 'private',
     component: GetStartedLayout,
     routes: [
       {
-        path: PATHS.GetStarted,
+        path: Paths.GetStarted,
         guard: 'private',
         component: GetStarted,
       },
       {
-        path: PATHS.StartNow,
+        path: Paths.StartNow,
         guard: 'private',
         component: StartNowPage,
       },
@@ -52,27 +52,27 @@ export const routes: Route[] = [
     component: WorkSpaceConfig,
     routes: [
       {
-        path: PATHS.WorkSpaceConfig1,
+        path: Paths.WorkspaceConfig,
         guard: 'private',
         component: Step1,
       },
       {
-        path: PATHS.WorkSpaceConfig2,
+        path: Paths.WorkspaceConfig1,
         guard: 'private',
         component: Step2,
       },
       {
-        path: PATHS.WorkSpaceConfig3,
+        path: Paths.WorkspaceConfig3,
         guard: 'private',
         component: Step3,
       },
       {
-        path: PATHS.WorkSpaceConfig4,
+        path: Paths.WorkspaceConfig4,
         guard: 'private',
         component: Step4,
       },
       {
-        path: PATHS.WorkSpaceConfig5,
+        path: Paths.WorkspaceConfig5,
         guard: 'private',
         component: Step5,
       },
@@ -81,12 +81,12 @@ export const routes: Route[] = [
         component: AuthLayout,
         routes: [
           {
-            path: PATHS.Login,
+            path: Paths.Login,
             guard: 'public',
             component: Login,
           },
           {
-            path: PATHS.Register,
+            path: Paths.Register,
             guard: 'public',
             component: Register,
           },
@@ -100,7 +100,7 @@ export const routes: Route[] = [
     component: Layout,
     routes: [
       {
-        path: PATHS.Dashboard,
+        path: Paths.Dashboard,
         guard: 'private',
         showInMenu: true,
         label: 'dashboard',
@@ -108,7 +108,7 @@ export const routes: Route[] = [
         icon: <DashboardIcon />,
       },
       {
-        path: PATHS.Spaces,
+        path: Paths.Spaces,
         guard: 'private',
         showInMenu: true,
         label: 'spaces',
@@ -136,7 +136,7 @@ export const routes: Route[] = [
         ],
       },
       {
-        path: PATHS.Chat,
+        path: Paths.Chat,
         guard: 'private',
         showInMenu: true,
         label: 'chat',
@@ -145,7 +145,7 @@ export const routes: Route[] = [
         suffix: <Number color="blue" content="3" />,
       },
       {
-        path: PATHS.Brainstorming,
+        path: Paths.Brainstorming,
         guard: 'private',
         showInMenu: true,
         label: 'brainstorming',
@@ -153,7 +153,7 @@ export const routes: Route[] = [
         icon: <BrainstormingIcon />,
       },
       {
-        path: PATHS.Calendar,
+        path: Paths.Calendar,
         guard: 'private',
         showInMenu: true,
         label: 'calendar',
@@ -161,7 +161,7 @@ export const routes: Route[] = [
         icon: <CalendarIcon />,
       },
       {
-        path: PATHS.TimeTracking,
+        path: Paths.TimeTracking,
         guard: 'private',
         showInMenu: true,
         label: 'timeTracking',
@@ -170,7 +170,7 @@ export const routes: Route[] = [
         suffix: <Number color="red" content="01:56" />,
       },
       {
-        path: PATHS.ReportGeneration,
+        path: Paths.ReportGeneration,
         guard: 'private',
         showInMenu: true,
         label: 'reportGeneration',
@@ -178,7 +178,7 @@ export const routes: Route[] = [
         icon: <ReportGenerationIcon />,
       },
       {
-        path: PATHS.Settings,
+        path: Paths.Settings,
         guard: 'private',
         showInMenu: true,
         label: 'settings',

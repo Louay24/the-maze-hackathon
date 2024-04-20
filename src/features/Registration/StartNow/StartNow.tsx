@@ -2,7 +2,7 @@ import { message } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { RightArrow } from 'src/assets/icons/RightArrow/RightArrow';
 import { Button } from 'src/components/Button/Button';
-import { PATHS } from 'src/constants/paths';
+import { Paths } from 'src/constants/paths';
 import { FireFilled } from '@ant-design/icons';
 
 export const StartNow = () => {
@@ -30,7 +30,7 @@ export const StartNow = () => {
             About Us
           </Button>
           <Button
-            onClick={() => navigate(PATHS.Register)}
+            onClick={() => navigate(Paths.Register)}
             className="get_started-navigation-next"
           >
             GetStarted !{<RightArrow />}
