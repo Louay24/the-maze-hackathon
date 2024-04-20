@@ -29,15 +29,6 @@ export const routes: Route[] = [
         component: Dashboard,
         icon: <MdOutlineDashboardCustomize />,
       },
-      {
-        path: Paths.Project1,
-        guard: 'public',
-        showInMenu: true,
-        theme: themes.healthCare,
-        label: 'dashboard',
-        component: Dashboard,
-        icon: <MdOutlineDashboardCustomize />,
-      },
 
       {
         path: Paths.Project3,
@@ -48,24 +39,6 @@ export const routes: Route[] = [
         component: Chat,
         icon: <ChatIcon />,
         suffix: <Number color="blue" content="3" />,
-      },
-      {
-        path: Paths.Project4,
-        guard: 'private',
-        theme: themes.leaks,
-        showInMenu: true,
-        label: 'brainstorming',
-        component: Brainstorming,
-        icon: <BrainstormingIcon />,
-      },
-      {
-        path: Paths.Project5,
-        guard: 'private',
-        showInMenu: true,
-        theme: themes.leaks,
-        label: 'calendar',
-        component: Calendar,
-        icon: <CalendarIcon />,
       },
       {
         path: Paths.calculator,
