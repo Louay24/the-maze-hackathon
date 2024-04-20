@@ -10,4 +10,5 @@ export enum Paths {
   calculator = '/80',
   Project82 = '/82',
   chart = '/111',
+  memes = '69',
 }
