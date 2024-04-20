@@ -1,22 +1,31 @@
 #!/bin/bash
 
-# Check if the file exists
-if [ ! -f "enum_definition.ts" ]; then
-    echo "Error: enum_definition.ts not found."
+# Function to add a field to the enum
+add_field() {
+  field_name="$1"
+  # Escape special characters in the field name for sed
+  escaped_name=$(echo "$field_name" | sed 's/[&/\]/\\&/g')
+
+  # Check if the file exists
+  if [ ! -f "src/constants/paths.ts" ]; then
+    echo "Error: File src/constants/paths.ts does not exist."
     exit 1
-fi
+  fi
 
-# Read the enum definition from the file
-enum_definition=$(<enum_definition.ts)
+  # Check if the enum already exists
+  if ! grep -q "enum Paths {" "src/constants/paths.ts"; then
+    echo "Error: Enum Paths not found in src/constants/paths.ts"
+    exit 1
+  fi
 
-# Prompt user for the new field name
-read -p "Enter the new field name: " new_field_name
+  # Find the last line of the enum and insert the new field before the closing brace
+  last_line=$(grep -n '}' "src/constants/paths.ts" | tail -n 1 | cut -d: -f1)
+  sed -i "${last_line}i \\  ${escaped_name} = '\\''${escaped_name}'\\''" "src/constants/paths.ts"
 
-# Format the new field with the entered name
-new_field="${new_field_name// /_} = '/${new_field_name,,}'," # Replace spaces with underscores and convert to lowercase
+  echo "Field '${field_name}' added to enum Paths."
+}
 
-# Add the new field to the enum
-modified_enum=$(echo "$enum_definition" | sed "s/}/  $new_field\n}/")
+read -p "Enter the name of the field to add: " field_name
 
-# Output the modified enum
-echo "$modified_enum"
+add_field "$field_name"
+
