@@ -7,8 +7,8 @@ export const Register = () => {
   const navigate = useNavigate();
   return (
     <FormContainer
-      title="Create your Wayzello account"
-      description="By creating your Wayzello account, you will be able to create your workspace, invite your team members and manage your project in the right way"
+      title="Create your infinity bug account"
+      description="By creating your infinity bug account, you will be able to create your workspace, invite your team members and manage your project in the right way"
       onSubmit={() => {
         alert('register');
       }}

@@ -13,7 +13,7 @@ export const Logo = ({
       <div className="logo">
         <div className={`logo_circle ${type ?? ''}`}></div>
         {title && (
-          <h1 className={`logo_title grotesk ${type ?? ''}`}>Wayzello</h1>
+          <h1 className={`logo_title grotesk ${type ?? ''}`}>infinity bug</h1>
         )}
       </div>
     </Link>

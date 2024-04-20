@@ -28,15 +28,15 @@ export default defineConfig({
 
       includeAssets: ['**/*'],
       manifest: {
-        name: 'Wayzello',
-        short_name: 'Wayzello',
+        name: 'infinity bug',
+        short_name: 'infinity bug',
         start_url: '/',
         display: 'fullscreen',
         background_color: '#F7F8F9',
         lang: 'en',
         scope: '/',
         theme_color: '#F7F8F9',
-        description: 'Wayzello is a project management tool for teams.',
+        description: 'infinity bug is a project management tool for teams.',
         icons: [
           {
             src: '/icon-192x192.png',
@@ -74,7 +74,7 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: './dist/wayzello',
+    outDir: './dist/infinity bug',
     reportCompressedSize: true,
     commonjsOptions: {
       transformMixedEsModules: true,
@@ -91,7 +91,7 @@ export default defineConfig({
 
     reporters: ['default'],
     coverage: {
-      reportsDirectory: './coverage/wayzello',
+      reportsDirectory: './coverage/infinity bug',
       provider: 'v8',
     },
   },

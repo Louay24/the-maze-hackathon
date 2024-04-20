@@ -9,8 +9,8 @@ export const Login = () => {
   const navigate = useNavigate();
   return (
     <FormContainer
-      title="Login your Wayzello account"
-      description="By loging in your Wayzello account, you will be able to create your workspace, invite your team members and manage your project in the right way"
+      title="Login your infinity bug account"
+      description="By loging in your infinity bug account, you will be able to create your workspace, invite your team members and manage your project in the right way"
       onSubmit={() => {
         alert('login');
       }}

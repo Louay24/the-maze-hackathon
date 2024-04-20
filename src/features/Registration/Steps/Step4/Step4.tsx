@@ -15,7 +15,7 @@ export const Step4 = () => {
     <div className="step_radio-container">
       <StepDetails
         title="Choose your work field"
-        description="Choose the field where you will use Wayzello"
+        description="Choose the field where you will use infinity bug"
       />
       <RadioButtons
         onChange={(value) => {

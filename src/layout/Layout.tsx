@@ -82,7 +82,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
         <div className="main_layout-sider-workspace">
           <Select
             className="main_layout-sider-select"
-            defaultValue={'wayzello'}
+            defaultValue={'infinity bug'}
             suffixIcon={<BottomArrow className="fill-royal-blue" />}
             labelRender={({ label }) => (
               <Workspace
@@ -100,9 +100,9 @@ export const Layout = ({ children }: { children: ReactNode }) => {
             )}
             options={[
               {
-                value: 'wayzello',
+                value: 'infinity bug',
                 label: {
-                  title: 'Wayzello’s workspace',
+                  title: 'infinity bug’s workspace',
                   image:
                     'https://png.pngtree.com/background/20230617/original/pngtree-office-essentials-afloat-3d-rendering-of-laptop-and-tools-on-blue-picture-image_3697149.jpg',
                 },
@@ -133,7 +133,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
           className="main_layout-sider-breadcrumb"
           items={[
             {
-              title: "Wayzello's workspace",
+              title: "infinity bug's workspace",
             },
             ...labels,
           ]}

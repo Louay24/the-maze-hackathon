@@ -39,7 +39,7 @@
       }
     }
   ],
-  "defaultProject": "wayzello",
+  "defaultProject": "infinity bug",
   "generators": {
     "@nx/react": {
       "application": {
