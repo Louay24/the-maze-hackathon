@@ -1,6 +1,6 @@
 export enum Paths {
   Root = '/',
-  Project1 = '/project1',
+  Project1 = '/18',
   Project2 = '/project2',
   Project3 = '/project3',
   Project4 = '/project4',
