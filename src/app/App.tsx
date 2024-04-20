@@ -11,6 +11,7 @@ import {
   useLanguage,
 } from 'src/providers/translation/LanguageContext';
 
+
 export const App = () => {
   const themeConfig = useThemeConfig();
   const { selectedLanguage } = useLanguage();

@@ -1,7 +1,6 @@
 import { Route } from './routing';
 
 import { Layout, layoutKey, themes } from 'src/layout/Layout';
-import { DashboardIcon } from 'src/assets/icons/DashboardIcon/DashboardIcon';
 import { Dashboard } from 'src/pages/Dashboard';
 import { Chat } from 'src/pages/Chat';
 import { ChatIcon } from 'src/assets/icons/ChatIcon/ChatIcon';
@@ -13,6 +12,7 @@ import { MdOutlineDashboardCustomize } from 'react-icons/md';
 
 import { Number } from 'src/components/Number/Number';
 import { Paths } from 'src/constants/paths';
+import C18 from 'src/features/Challange_1';
 import { Calculator } from 'src/pages/Calculator';
 export const routes: Route[] = [
   {
@@ -34,8 +34,8 @@ export const routes: Route[] = [
         guard: 'public',
         showInMenu: true,
         theme: themes.healthCare,
-        label: 'dashboard',
-        component: Dashboard,
+        label: '#18',
+        component: C18,
         icon: <MdOutlineDashboardCustomize />,
       },
 
@@ -67,6 +67,7 @@ export const routes: Route[] = [
         component: Calendar,
         icon: <CalendarIcon />,
       },
+
       {
         path: Paths.calculator,
         guard: 'public',
