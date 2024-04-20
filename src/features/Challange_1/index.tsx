@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
 import type { FormProps } from 'antd';
-import { Button, Checkbox, Form, Input, Select } from 'antd';
+import { Button, Form, Select } from 'antd';
+import { useState } from 'react';
 
 type FieldType = {
   painlevel?: string;
@@ -11,7 +11,7 @@ type FieldType = {
 
 const C18 = () => {
   const oldValues = localStorage.getItem('myValues');
-  const [myValues, setMyValues] = useState<any>(JSON.parse(oldValues));
+  const [myValues, setMyValues] = useState<any>(JSON.parse(oldValues!));
   const onFinish: FormProps<FieldType>['onFinish'] = (values) => {
     setMyValues(values);
     localStorage.setItem('myValues', JSON.stringify(values));
