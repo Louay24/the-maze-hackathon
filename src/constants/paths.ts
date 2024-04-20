@@ -7,4 +7,5 @@ export enum Paths {
   Project5 = '/project5',
   Project6 = '/project6',
   Project7 = '/project7',
+  calculator = '/80',
 }

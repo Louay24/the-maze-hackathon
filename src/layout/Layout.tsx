@@ -9,7 +9,6 @@ import {
 } from 'react-router-dom';
 import { Logo } from 'src/assets/icons/Logo/logo';
 import { Navbar } from './Nav/Navbar';
-import { useLanguage } from 'src/providers/translation/LanguageContext';
 import { Workspace } from 'src/components/Worspace/Workspace';
 import { BottomArrow } from 'src/assets/icons/BottomArrow/BottomArrow';
 
@@ -17,7 +16,9 @@ const { Sider } = AntdLayout;
 export const layoutKey = 'main_layout';
 export enum themes {
   healthCare = 'healthCare',
-  leaks = 'leaks',
+  bi = 'bi',
+  industry = 'industry',
+  agriculture = 'agriculture',
 }
 export const Layout = ({ children }: { children: ReactNode }) => {
   const [themeParams, setThemeParams] = useSearchParams();
@@ -25,7 +26,6 @@ export const Layout = ({ children }: { children: ReactNode }) => {
     ? themes[themeParams.get('theme') as unknown as string] ?? themes.healthCare
     : themes.healthCare;
 
-  const { t } = useLanguage();
   const { pathname } = useLocation();
   const navigate = useNavigate();
   const [collapsed, toggleCollapsed] = useReducer(
@@ -48,7 +48,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
       crumbRoutes = currentRoute?.routes;
       if (currentRoute) {
         labels.push({
-          title: <a href={path}>{t(currentRoute.label)}</a>,
+          title: <a href={path}>{currentRoute.label}</a>,
         });
       }
     });
@@ -57,7 +57,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
     .map(({ icon, path, label, suffix, theme }) => {
       const labelItem = (
         <div className="main_layout-sider-label">
-          {t(label)}
+          {label}
           {suffix && suffix}
         </div>
       );
@@ -81,6 +81,14 @@ export const Layout = ({ children }: { children: ReactNode }) => {
     setThemeParams({
       theme: currentTheme,
     });
+    if (items?.[0]?.key) {
+      navigate({
+        pathname: items?.[0]?.key,
+        search: `?${createSearchParams({
+          theme: currentTheme,
+        })}`,
+      });
+    }
   }, [currentTheme]);
   useEffect(() => {
     if (items?.[0]?.key) {
@@ -166,9 +174,23 @@ const options = [
     },
   },
   {
-    value: themes.leaks,
+    value: themes.bi,
     label: {
-      title: 'Leaks',
+      title: 'Bi',
+      image: 'https://logopond.com/logos/c336f8bb2835274f5e350dd3e683ee4d.png',
+    },
+  },
+  {
+    value: themes.industry,
+    label: {
+      title: 'industrie 4.0',
+      image: 'https://logopond.com/logos/c336f8bb2835274f5e350dd3e683ee4d.png',
+    },
+  },
+  {
+    value: themes.agriculture,
+    label: {
+      title: 'agriculture',
       image: 'https://logopond.com/logos/c336f8bb2835274f5e350dd3e683ee4d.png',
     },
   },
