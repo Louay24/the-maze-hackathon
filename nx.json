@@ -39,7 +39,7 @@
       }
     }
   ],
-  "defaultProject": "infinity bug",
+  "defaultProject": "infinity-bug",
   "generators": {
     "@nx/react": {
       "application": {

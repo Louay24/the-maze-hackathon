@@ -1,13 +1,13 @@
 export const users = [
   {
     id: 1,
-    username: 'Infinity bug',
+    username: 'infinity-bug',
     email: 'john@example.com',
     fullname: 'John Doe',
     age: 30,
     gender: 'male',
     country: 'USA',
-    avatar: `https://robohash.org/Infinity bug`,
+    avatar: `https://robohash.org/infinity-bug`,
   },
   {
     id: 2,
