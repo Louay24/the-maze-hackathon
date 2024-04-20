@@ -13,6 +13,7 @@ import { MdOutlineDashboardCustomize } from 'react-icons/md';
 
 import { Number } from 'src/components/Number/Number';
 import { Paths } from 'src/constants/paths';
+import { Calculator } from 'src/pages/Calculator';
 export const routes: Route[] = [
   {
     guard: 'public',
@@ -56,6 +57,15 @@ export const routes: Route[] = [
         label: 'calendar',
         component: Calendar,
         icon: <CalendarIcon />,
+      },
+      {
+        path: Paths.calculator,
+        guard: 'public',
+        showInMenu: true,
+        theme: themes.industry,
+        label: 'calculator',
+        component: Calculator,
+        icon: <MdOutlineDashboardCustomize />,
       },
     ],
   },

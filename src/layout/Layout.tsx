@@ -17,6 +17,7 @@ export const layoutKey = 'main_layout';
 export enum themes {
   healthCare = 'healthCare',
   leaks = 'leaks',
+  industry = 'industry',
 }
 export const Layout = ({ children }: { children: ReactNode }) => {
   const [themeParams, setThemeParams] = useSearchParams();
@@ -46,7 +47,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
       crumbRoutes = currentRoute?.routes;
       if (currentRoute) {
         labels.push({
-          title: <a href={path}>{t(currentRoute.label)}</a>,
+          title: <a href={path}>{currentRoute.label}</a>,
         });
       }
     });
@@ -167,6 +168,13 @@ const options = [
     value: themes.leaks,
     label: {
       title: 'Leaks',
+      image: 'https://logopond.com/logos/c336f8bb2835274f5e350dd3e683ee4d.png',
+    },
+  },
+  {
+    value: themes.industry,
+    label: {
+      title: 'industrie 4.0',
       image: 'https://logopond.com/logos/c336f8bb2835274f5e350dd3e683ee4d.png',
     },
   },
