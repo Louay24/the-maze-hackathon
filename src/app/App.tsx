@@ -10,7 +10,7 @@ import {
   Languages,
   useLanguage,
 } from 'src/providers/translation/LanguageContext';
-import ChatBoot from 'src/features/Boot/Chat';
+
 
 export const App = () => {
   const themeConfig = useThemeConfig();
@@ -25,7 +25,6 @@ export const App = () => {
     >
       <div className={`App light ${direction}`}>
         <BrowserRouter> {setUpRoutes(routes)}</BrowserRouter>
-        <ChatBoot />
       </div>
     </ConfigProvider>
   );
