@@ -10,6 +10,7 @@ import { Paths } from 'src/constants/paths';
 import C18 from 'src/features/Challange_1';
 import { Chart } from 'src/pages/Chart';
 import { Calculator } from 'src/pages/Calculator';
+import C82 from 'src/features/Challange_82';
 export const routes: Route[] = [
   {
     guard: 'public',
@@ -34,7 +35,15 @@ export const routes: Route[] = [
         component: C18,
         icon: <MdOutlineDashboardCustomize />,
       },
-
+      {
+        path: Paths.Project82,
+        guard: 'public',
+        showInMenu: true,
+        theme: themes.healthCare,
+        label: '#82',
+        component: C82,
+        icon: <MdOutlineDashboardCustomize />,
+      },
       {
         path: Paths.chart,
         guard: 'public',
