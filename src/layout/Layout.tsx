@@ -149,15 +149,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
       </Sider>
       <div className="main_layout-sider-body">
         <Navbar />
-        <Breadcrumb
-          className="main_layout-sider-breadcrumb"
-          items={[
-            {
-              title: "infinity bug's workspace",
-            },
-            ...labels,
-          ]}
-        />
+
         <div className="main_layout-sider-content">{children}</div>
       </div>
     </AntdLayout>
