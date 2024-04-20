@@ -21,6 +21,15 @@ export const routes: Route[] = [
     component: Layout,
     routes: [
       {
+        path: Paths.Root,
+        guard: 'public',
+        showInMenu: true,
+        theme: themes.healthCare,
+        label: 'dashboard',
+        component: Dashboard,
+        icon: <MdOutlineDashboardCustomize />,
+      },
+      {
         path: Paths.Project1,
         guard: 'public',
         showInMenu: true,

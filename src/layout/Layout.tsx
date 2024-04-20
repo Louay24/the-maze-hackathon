@@ -80,6 +80,14 @@ export const Layout = ({ children }: { children: ReactNode }) => {
     setThemeParams({
       theme: currentTheme,
     });
+    if (items?.[0]?.key) {
+      navigate({
+        pathname: items?.[0]?.key,
+        search: `?${createSearchParams({
+          theme: currentTheme,
+        })}`,
+      });
+    }
   }, [currentTheme]);
   useEffect(() => {
     if (items?.[0]?.key) {

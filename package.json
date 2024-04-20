@@ -1,11 +1,11 @@
 {
-  "name": "@infinity bug/source",
+  "name": "@infinity-bug/source",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "serve": "npx serve -s dist/infinity bug",
+    "serve": "npx serve -s dist/infinity-bug",
     "test": "nx test",
     "prepare": "husky"
   },
