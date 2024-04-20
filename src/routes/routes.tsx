@@ -11,7 +11,7 @@ import { Step4 } from 'src/features/Registration/Steps/Step4/Step4';
 import { Step5 } from 'src/features/Registration/Steps/Step5/Step5';
 import { GetStartedLayout } from 'src/features/Registration/GetStartedLayout/GetStartedLayout';
 import { StartNowPage } from 'src/pages/StartNowPage';
-import { Layout, layoutKey } from 'src/layout/Layout';
+import { Layout, layoutKey, themes } from 'src/layout/Layout';
 import { DashboardIcon } from 'src/assets/icons/DashboardIcon/DashboardIcon';
 import { SpacesIcon } from 'src/assets/icons/SpacesIcon/SpacesIcon';
 import { Dashboard } from 'src/pages/Dashboard';
@@ -32,111 +32,31 @@ import { Number } from 'src/components/Number/Number';
 import { Paths } from 'src/constants/paths';
 export const routes: Route[] = [
   {
-    guard: 'private',
-    component: GetStartedLayout,
-    routes: [
-      {
-        path: Paths.GetStarted,
-        guard: 'private',
-        component: GetStarted,
-      },
-      {
-        path: Paths.StartNow,
-        guard: 'private',
-        component: StartNowPage,
-      },
-    ],
-  },
-  {
-    guard: 'private',
-    component: WorkSpaceConfig,
-    routes: [
-      {
-        path: Paths.WorkspaceConfig,
-        guard: 'private',
-        component: Step1,
-      },
-      {
-        path: Paths.WorkspaceConfig1,
-        guard: 'private',
-        component: Step2,
-      },
-      {
-        path: Paths.WorkspaceConfig3,
-        guard: 'private',
-        component: Step3,
-      },
-      {
-        path: Paths.WorkspaceConfig4,
-        guard: 'private',
-        component: Step4,
-      },
-      {
-        path: Paths.WorkspaceConfig5,
-        guard: 'private',
-        component: Step5,
-      },
-      {
-        guard: 'public',
-        component: AuthLayout,
-        routes: [
-          {
-            path: Paths.Login,
-            guard: 'public',
-            component: Login,
-          },
-          {
-            path: Paths.Register,
-            guard: 'public',
-            component: Register,
-          },
-        ],
-      },
-    ],
-  },
-  {
-    guard: 'private',
+    guard: 'public',
     key: layoutKey,
     component: Layout,
     routes: [
       {
-        path: Paths.Dashboard,
-        guard: 'private',
+        path: Paths.Project1,
+        guard: 'public',
         showInMenu: true,
+        theme: themes.healthCare,
         label: 'dashboard',
         component: Dashboard,
         icon: <DashboardIcon />,
       },
       {
-        path: Paths.Spaces,
+        path: Paths.Project2,
         guard: 'private',
         showInMenu: true,
         label: 'spaces',
+        theme: themes.healthCare,
         component: Spaces,
         icon: <SpacesIcon />,
-        routes: [
-          {
-            path: '/spaces/ss',
-            guard: 'private',
-            showInMenu: true,
-            label: 'ss',
-            component: Spaces,
-            icon: <SpacesIcon />,
-            routes: [
-              {
-                path: '/spaces/ss/rr',
-                guard: 'private',
-                showInMenu: true,
-                label: 'rr',
-                component: Spaces,
-                icon: <SpacesIcon />,
-              },
-            ],
-          },
-        ],
       },
       {
-        path: Paths.Chat,
+        path: Paths.Project3,
+        theme: themes.healthCare,
         guard: 'private',
         showInMenu: true,
         label: 'chat',
@@ -145,45 +65,22 @@ export const routes: Route[] = [
         suffix: <Number color="blue" content="3" />,
       },
       {
-        path: Paths.Brainstorming,
+        path: Paths.Project4,
         guard: 'private',
+        theme: themes.leaks,
         showInMenu: true,
         label: 'brainstorming',
         component: Brainstorming,
         icon: <BrainstormingIcon />,
       },
       {
-        path: Paths.Calendar,
+        path: Paths.Project5,
         guard: 'private',
         showInMenu: true,
+        theme: themes.leaks,
         label: 'calendar',
         component: Calendar,
         icon: <CalendarIcon />,
-      },
-      {
-        path: Paths.TimeTracking,
-        guard: 'private',
-        showInMenu: true,
-        label: 'timeTracking',
-        component: TimeTracking,
-        icon: <TimeTrackingIcon />,
-        suffix: <Number color="red" content="01:56" />,
-      },
-      {
-        path: Paths.ReportGeneration,
-        guard: 'private',
-        showInMenu: true,
-        label: 'reportGeneration',
-        component: ReportGeneration,
-        icon: <ReportGenerationIcon />,
-      },
-      {
-        path: Paths.Settings,
-        guard: 'private',
-        showInMenu: true,
-        label: 'settings',
-        component: Settings,
-        icon: <SettingsIcon />,
       },
     ],
   },

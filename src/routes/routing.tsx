@@ -1,8 +1,9 @@
 import { Fragment, ReactNode } from 'react';
-import { Route, Outlet, Routes } from 'react-router-dom';
+import { Route, Outlet, Routes, useSearchParams } from 'react-router-dom';
 import { AuthGuard } from 'src/guards/AuthGuard';
 import { GuestGuard } from 'src/guards/GuestGuard';
 import { motion } from 'framer-motion';
+import { themes } from 'src/layout/Layout';
 export interface Route {
   path?: string;
   key?: string;
@@ -13,6 +14,7 @@ export interface Route {
   guard: 'private' | 'public';
   routes?: Route[];
   index?: boolean;
+  theme?: themes;
   suffix?: ReactNode;
 }
 export const renderRoutes = (routes: Route[]) => {
