@@ -9,7 +9,7 @@ export const UserDetails = () => {
       <UserAvatar size="large" user={users[0]} />
       <div className="user_details-info">
         <h3 className="user_details-info-name">
-          <TooltipText text="Infinity bug" maxWidth={160} />
+          <TooltipText text="infinity-bug" maxWidth={160} />
         </h3>
         <p className="user_details-info-position">
           <TooltipText text="UI/UX Designer" maxWidth={160} />
