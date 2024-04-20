@@ -26,7 +26,7 @@ export const routes: Route[] = [
         showInMenu: true,
         theme: themes.healthCare,
         label: 'dashboard',
-        component: Calculator,
+        component: Dashboard,
         icon: <MdOutlineDashboardCustomize />,
       },
       {
