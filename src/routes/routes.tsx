@@ -15,6 +15,7 @@ import C72 from 'src/features/Challange_72';
 import C150 from 'src/features/Challange_150';
 import { MemesPage } from 'src/pages/MemesPage';
 import { Figma } from 'src/pages/Figma';
+import C114 from 'src/features/Challange_114';
 export const routes: Route[] = [
   {
     guard: 'public',
@@ -37,6 +38,15 @@ export const routes: Route[] = [
         theme: themes.healthCare,
         label: '#18',
         component: C18,
+        icon: <MdOutlineDashboardCustomize />,
+      },
+      {
+        path: Paths.Project114,
+        guard: 'public',
+        showInMenu: true,
+        theme: themes.bi,
+        label: '#114',
+        component: C114,
         icon: <MdOutlineDashboardCustomize />,
       },
       {
