@@ -1,5 +1,5 @@
 import { Fragment, ReactNode } from 'react';
-import { Route, Outlet, Routes, useSearchParams } from 'react-router-dom';
+import { Route, Outlet, Routes } from 'react-router-dom';
 import { AuthGuard } from 'src/guards/AuthGuard';
 import { GuestGuard } from 'src/guards/GuestGuard';
 import { motion } from 'framer-motion';
