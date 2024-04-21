@@ -8,7 +8,7 @@ export const WorldClock = () => {
   const [times, setTimes] = useState();
   const fetchFunc = async ({ search }: any) => {
     await fetch(
-      `http://api.timezonedb.com/v2.1/list-time-zone?key=FN56ZEF8VCAA&country=${search}&format=json`
+      `http://api.timezonedb.com/v2.1/list-time-zone?key=FN56ZEF8VCAA&country=${search.toUpperCase()}&format=json`
     )
       .then(async (res) => {
         const response = await res.json();
