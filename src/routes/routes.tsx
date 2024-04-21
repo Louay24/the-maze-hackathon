@@ -13,6 +13,7 @@ import { Calculator } from 'src/pages/Calculator';
 import C82 from 'src/features/Challange_82';
 import { MemesPage } from 'src/pages/MemesPage';
 import { Figma } from 'src/pages/Figma';
+import C114 from 'src/features/Challange_114';
 import { WorldClock } from 'src/pages/WorldClock';
 import { CalendarIcon } from 'src/assets/icons/CalendarIcon/CalendarIcon';
 export const routes: Route[] = [
@@ -37,6 +38,15 @@ export const routes: Route[] = [
         theme: themes.healthCare,
         label: '#18',
         component: C18,
+        icon: <MdOutlineDashboardCustomize />,
+      },
+      {
+        path: Paths.Project114,
+        guard: 'public',
+        showInMenu: true,
+        theme: themes.bi,
+        label: '#114',
+        component: C114,
         icon: <MdOutlineDashboardCustomize />,
       },
       {
