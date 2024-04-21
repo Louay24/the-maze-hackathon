@@ -11,21 +11,29 @@
   },
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/material": "^5.15.15",
     "antd": "^5.15.3",
+    "chart.js": "^4.4.2",
     "dayjs": "^1.11.10",
     "debounce": "^2.0.0",
     "framer-motion": "^11.0.20",
     "husky": "^9.0.11",
     "i": "^0.3.7",
+    "mui": "^0.0.1",
     "npm": "^10.5.2",
     "react": "18.2.0",
+    "react-chartjs-2": "^5.2.0",
     "react-detect-click-outside": "^1.1.7",
     "react-dom": "18.2.0",
     "react-icons": "^5.1.0",
     "react-lottie": "^1.2.4",
     "react-router-dom": "^6.22.3",
     "react-window": "^1.8.10",
-    "vite-plugin-pwa": "^0.19.8"
+    "socket.io-client": "^4.7.5",
+    "vite-plugin-pwa": "^0.19.8",
+    "yup": "^1.4.0"
   },
   "engines": {
     "node": "21.6.1"

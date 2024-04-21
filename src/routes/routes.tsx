@@ -2,11 +2,11 @@ import { Route } from './routing';
 
 import { Layout, layoutKey, themes } from 'src/layout/Layout';
 import { Dashboard } from 'src/pages/Dashboard';
-import { ChatIcon } from 'src/assets/icons/ChatIcon/ChatIcon';
 
 import { MdOutlineDashboardCustomize } from 'react-icons/md';
 
 import { Paths } from 'src/constants/paths';
+import MedicationReminderUI from 'src/pages/MedicationReminderUI';
 import C18 from 'src/features/Challange_1';
 import { Chart } from 'src/pages/Chart';
 import { Calculator } from 'src/pages/Calculator';
@@ -14,6 +14,7 @@ import C82 from 'src/features/Challange_82';
 import { MemesPage } from 'src/pages/MemesPage';
 import { Figma } from 'src/pages/Figma';
 import { WorldClock } from 'src/pages/WorldClock';
+import { CalendarIcon } from 'src/assets/icons/CalendarIcon/CalendarIcon';
 export const routes: Route[] = [
   {
     guard: 'public',
@@ -46,6 +47,15 @@ export const routes: Route[] = [
         label: '#82',
         component: C82,
         icon: <MdOutlineDashboardCustomize />,
+      },
+      {
+        path: Paths.Project5,
+        guard: 'public',
+        showInMenu: true,
+        theme: themes.healthCare,
+        label: 'MedicationReminderUI',
+        component: MedicationReminderUI,
+        icon: <CalendarIcon />,
       },
       {
         path: Paths.chart,
