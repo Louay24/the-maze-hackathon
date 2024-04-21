@@ -2,7 +2,6 @@ import { Route } from './routing';
 
 import { Layout, layoutKey, themes } from 'src/layout/Layout';
 import { Dashboard } from 'src/pages/Dashboard';
-import { ChatIcon } from 'src/assets/icons/ChatIcon/ChatIcon';
 
 import { MdOutlineDashboardCustomize } from 'react-icons/md';
 
@@ -14,6 +13,7 @@ import { Calculator } from 'src/pages/Calculator';
 import C82 from 'src/features/Challange_82';
 import { MemesPage } from 'src/pages/MemesPage';
 import { Figma } from 'src/pages/Figma';
+import { WorldClock } from 'src/pages/WorldClock';
 import { CalendarIcon } from 'src/assets/icons/CalendarIcon/CalendarIcon';
 export const routes: Route[] = [
   {
@@ -91,6 +91,15 @@ export const routes: Route[] = [
         theme: themes.bi,
         label: 'UI/UX challenges',
         component: Figma,
+        icon: <MdOutlineDashboardCustomize />,
+      },
+      {
+        path: Paths.worldClock,
+        guard: 'public',
+        showInMenu: true,
+        theme: themes.industry,
+        label: 'World Clock',
+        component: WorldClock,
         icon: <MdOutlineDashboardCustomize />,
       },
     ],

@@ -14,4 +14,5 @@ export enum Paths {
   chart = '/111',
   memes = '/69',
   figma = '/figma',
+  worldClock = '/61',
 }

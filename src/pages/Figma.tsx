@@ -23,7 +23,7 @@ export const Figma = () => {
         <a target="_blank" href={link.link} rel="noreferrer">
           {link.challenge}
         </a>
-      ))}{' '}
+      ))}
     </div>
   );
 };
