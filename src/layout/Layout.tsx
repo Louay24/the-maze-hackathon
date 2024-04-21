@@ -46,7 +46,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
       crumbRoutes = currentRoute?.routes;
       if (currentRoute) {
         labels.push({
-          title: <a href={path}>{t(currentRoute.label)}</a>,
+          title: <a href={path}>{currentRoute.label}</a>,
         });
       }
     });

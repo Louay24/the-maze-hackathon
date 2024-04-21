@@ -13,6 +13,7 @@ import { MdOutlineDashboardCustomize } from 'react-icons/md';
 
 import { Number } from 'src/components/Number/Number';
 import { Paths } from 'src/constants/paths';
+import MedicationReminderUI from 'src/pages/MedicationReminderUI';
 export const routes: Route[] = [
   {
     guard: 'public',
@@ -23,21 +24,10 @@ export const routes: Route[] = [
         path: Paths.Project1,
         guard: 'public',
         showInMenu: true,
-        theme: themes.healthCare,
+        theme: themes.leaks,
         label: 'dashboard',
         component: Dashboard,
         icon: <MdOutlineDashboardCustomize />,
-      },
-
-      {
-        path: Paths.Project3,
-        theme: themes.healthCare,
-        guard: 'private',
-        showInMenu: true,
-        label: 'chat',
-        component: Chat,
-        icon: <ChatIcon />,
-        suffix: <Number color="blue" content="3" />,
       },
       {
         path: Paths.Project4,
@@ -50,11 +40,11 @@ export const routes: Route[] = [
       },
       {
         path: Paths.Project5,
-        guard: 'private',
+        guard: 'public',
         showInMenu: true,
-        theme: themes.leaks,
-        label: 'calendar',
-        component: Calendar,
+        theme: themes.healthCare,
+        label: 'MedicationReminderUI',
+        component: MedicationReminderUI,
         icon: <CalendarIcon />,
       },
     ],

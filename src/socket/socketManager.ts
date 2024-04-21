@@ -19,6 +19,7 @@ class SocketManager{
     this.connectedRoomId &&
       console.log('Should Leave from the previous room with ID', this.connectedRoomId)
     const token = localStorage.getItem('access_token')
+    console.log(token)
     if (this.socket || !token) return
 
     const socket = io(import.meta.env.VITE_APP_SOCKET_BASE_URL, {
@@ -26,11 +27,10 @@ class SocketManager{
         authorization: `Bearer ${localStorage.getItem('access_token')}`,
       },
     })
-
     this.socket = socket
     socket.on('connect', () => {
       this.socket = socket
-      this._membersManagement()
+      console.log('connected')
     })
 
     socket.on('error', (e:any) => {
@@ -43,9 +43,6 @@ class SocketManager{
 
     this.socket.emit('joinRoom', listId)
     this.connectedRoomId = listId
-
-  
-
     this.socket.on('notifRoom', (update:any) => {
       this.connectedRoomId = listId
 
