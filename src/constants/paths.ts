@@ -1,10 +1,17 @@
 export enum Paths {
   Root = '/',
-  Project1 = '/project1',
+  Project1 = '/18',
   Project2 = '/project2',
   Project3 = '/project3',
   Project4 = '/project4',
   Project5 = '/medication-reminder',
   Project6 = '/project6',
   Project7 = '/project7',
+  calculator = '/80',
+  Project82 = '/82',
+  Project72 = '/72',
+  Project150 = '/150',
+  chart = '/111',
+  memes = '/69',
+  figma = '/figma',
 }

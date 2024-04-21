@@ -13,6 +13,7 @@ import {
 import { useEffect } from 'react';
 import socketManager from 'src/socket/socketManager';
 
+
 export const App = () => {
   const themeConfig = useThemeConfig();
   const { selectedLanguage } = useLanguage();
