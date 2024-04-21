@@ -16,4 +16,5 @@ export enum Paths {
   memes = '/69',
   figma = '/figma',
   worldClock = '/61',
+  quiz = '/233',
 }
