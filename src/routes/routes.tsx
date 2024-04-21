@@ -16,6 +16,7 @@ import { Figma } from 'src/pages/Figma';
 import C114 from 'src/features/Challange_114';
 import { WorldClock } from 'src/pages/WorldClock';
 import { CalendarIcon } from 'src/assets/icons/CalendarIcon/CalendarIcon';
+import C72 from 'src/features/Challange_72';
 export const routes: Route[] = [
   {
     guard: 'public',
@@ -56,6 +57,15 @@ export const routes: Route[] = [
         theme: themes.healthCare,
         label: '#82',
         component: C82,
+        icon: <MdOutlineDashboardCustomize />,
+      },
+      {
+        path: Paths.Project72,
+        guard: 'public',
+        showInMenu: true,
+        theme: themes.healthCare,
+        label: '#72',
+        component: C72,
         icon: <MdOutlineDashboardCustomize />,
       },
       {
