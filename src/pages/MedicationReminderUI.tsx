@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Input, Button, List, message, Form, TimePicker,Typography } from 'antd';
 import { format , differenceInMinutes } from 'date-fns';
-import notificationSound from '../assets/Pop up sound effect.mp3'
+
 const { Item, useForm } = Form;
 const { Text } = Typography;
 
@@ -49,41 +49,37 @@ function MedicationReminderUI() {
   
 
   const checkReminders = () => {
-    const currentTime = format(new Date(), 'HH:mm:ss');
-
+    const currentTime = format(new Date(), 'HH:mm');
+    console.log(currentTime)
     const sortedMedications = [...medications].sort((a, b) => {
       const diffA = Math.abs(differenceInMinutes(new Date(`2000-01-01T${a.schedule}:00`), new Date(`2000-01-01T${currentTime}:00`)));
       const diffB = Math.abs(differenceInMinutes(new Date(`2000-01-01T${b.schedule}:00`), new Date(`2000-01-01T${currentTime}:00`)));
       return diffA - diffB;
     });
-
-    let nearestMedication = sortedMedications.find(medication => {
-      const timeDiff = differenceInMinutes(new Date(`2000-01-01T${medication.schedule}:00`), new Date(`2000-01-01T${currentTime}:00`));
-      return timeDiff >= 0;
-    });
-
-    if (!nearestMedication) {
-      nearestMedication = sortedMedications[0];
-    }
-
-    const timeDiffMinutes = differenceInMinutes(new Date(`2000-01-01T${nearestMedication.schedule}:00`), new Date(`2000-01-01T${currentTime}:00`));
-    const hours = Math.floor(timeDiffMinutes / 60);
-    const minutes = Math.floor(timeDiffMinutes % 60);
-    const seconds = Math.floor(differenceInSeconds(new Date(`2000-01-01T${nearestMedication.schedule}:00`), new Date(`2000-01-01T${currentTime}:00`)) % 60);
-
-    setNearestMedication({
-      name: nearestMedication.name,
-      dosage: nearestMedication.dosage,
-      timeDiff: `${hours} hours ${minutes} minutes ${seconds} seconds`
-    });
-
-    if (timeDiffMinutes === 0) {
-      const audio = new Audio(notificationSound);
-      audio.play();
-
-      message.info(`It's time to take ${nearestMedication.dosage} of ${nearestMedication.name}`);
+  
+    if (sortedMedications.length > 0) {
+      const nearestMedication = sortedMedications[0];
+      const timeDiff = Math.abs(differenceInMinutes(new Date(`2000-01-01T${nearestMedication.schedule}:00`), new Date(`2000-01-01T${currentTime}:00`)));
+  
+      if (timeDiff >= 0) {
+        const hours = Math.floor(timeDiff / 60);
+        const minutes = timeDiff % 60;
+        const seconds = Math.floor((timeDiff * 60) % 60);
+        setNearestMedication({
+          name: nearestMedication.name,
+          dosage: nearestMedication.dosage,
+          timeDiff: `${hours} hours , ${minutes} minutes and ${seconds} seconds`
+        });
+      } else {
+        setNearestMedication(null);
+      }
+  
+      if (nearestMedication.schedule === currentTime) {
+        message.info(`It's time to take ${nearestMedication.dosage} of ${nearestMedication.name}`);
+      }
     }
   };
+  
   
 
 
@@ -136,7 +132,7 @@ function MedicationReminderUI() {
           <TimePicker
           style={{width:'100%'}}
             format="HH:mm"
-            placeholder="Put Your Medication Time"
+            placeholder="Schedule"
             value={schedule}
             onChange={(time) => setSchedule(time)}
           />

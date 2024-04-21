@@ -14,6 +14,7 @@ import { Calculator } from 'src/pages/Calculator';
 import C82 from 'src/features/Challange_82';
 import { MemesPage } from 'src/pages/MemesPage';
 import { Figma } from 'src/pages/Figma';
+import { CalendarIcon } from 'src/assets/icons/CalendarIcon/CalendarIcon';
 export const routes: Route[] = [
   {
     guard: 'public',
@@ -48,7 +49,6 @@ export const routes: Route[] = [
         icon: <MdOutlineDashboardCustomize />,
       },
       {
-<<<<<<< 
         path: Paths.Project5,
         guard: 'public',
         showInMenu: true,
@@ -56,6 +56,8 @@ export const routes: Route[] = [
         label: 'MedicationReminderUI',
         component: MedicationReminderUI,
         icon: <CalendarIcon />,
+      },
+      {
         path: Paths.chart,
         guard: 'public',
         showInMenu: true,
