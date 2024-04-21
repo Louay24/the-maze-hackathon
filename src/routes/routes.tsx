@@ -16,6 +16,7 @@ import { Figma } from 'src/pages/Figma';
 import C114 from 'src/features/Challange_114';
 import { WorldClock } from 'src/pages/WorldClock';
 import { CalendarIcon } from 'src/assets/icons/CalendarIcon/CalendarIcon';
+import { Quiz } from 'src/pages/Quiz';
 export const routes: Route[] = [
   {
     guard: 'public',
@@ -110,6 +111,15 @@ export const routes: Route[] = [
         theme: themes.industry,
         label: 'World Clock',
         component: WorldClock,
+        icon: <MdOutlineDashboardCustomize />,
+      },
+      {
+        path: Paths.quiz,
+        guard: 'public',
+        showInMenu: true,
+        theme: themes.industry,
+        label: 'Quiz',
+        component: Quiz,
         icon: <MdOutlineDashboardCustomize />,
       },
     ],
