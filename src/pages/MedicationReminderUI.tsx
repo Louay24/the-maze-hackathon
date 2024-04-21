@@ -12,13 +12,22 @@ function MedicationReminderUI() {
   const [schedule, setSchedule] = useState<any>('');
   const [medications, setMedications] = useState<any>([]);
   const [nearestMedication, setNearestMedication] = useState<any>(null);
-
+  const storedMedicationsJson = localStorage.getItem('medications');
+  const storedMedications = storedMedicationsJson ? JSON.parse(storedMedicationsJson) : [];
+  
   const [form] = useForm();
-
+  useEffect(()=>{
+    const data = localStorage.getItem('medications')
+    if (!data) {
+      localStorage.setItem('medications',JSON.stringify([]))
+    }
+  },[])
   useEffect(() => {
-    const storedMedications = JSON.parse(localStorage.getItem('medications') || '') || [];
+    const storedMedicationsJson = localStorage.getItem('medications');
+    const storedMedications = storedMedicationsJson ? JSON.parse(storedMedicationsJson) : [];
     setMedications(storedMedications);
   }, []);
+  
 
   useEffect(() => {
     localStorage.setItem('medications', JSON.stringify(medications));
