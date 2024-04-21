@@ -13,6 +13,8 @@ import { Calculator } from 'src/pages/Calculator';
 import C82 from 'src/features/Challange_82';
 import C72 from 'src/features/Challange_72';
 import C150 from 'src/features/Challange_150';
+import { MemesPage } from 'src/pages/MemesPage';
+import { Figma } from 'src/pages/Figma';
 export const routes: Route[] = [
   {
     guard: 'public',
@@ -80,6 +82,24 @@ export const routes: Route[] = [
         theme: themes.industry,
         label: 'calculator',
         component: Calculator,
+        icon: <MdOutlineDashboardCustomize />,
+      },
+      {
+        path: Paths.memes,
+        guard: 'public',
+        showInMenu: true,
+        theme: themes.bi,
+        label: 'memes',
+        component: MemesPage,
+        icon: <MdOutlineDashboardCustomize />,
+      },
+      {
+        path: Paths.figma,
+        guard: 'public',
+        showInMenu: true,
+        theme: themes.bi,
+        label: 'UI/UX challenges',
+        component: Figma,
         icon: <MdOutlineDashboardCustomize />,
       },
     ],

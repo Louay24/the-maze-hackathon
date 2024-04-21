@@ -12,4 +12,6 @@ export enum Paths {
   Project72 = '/72',
   Project150 = '/150',
   chart = '/111',
+  memes = '/69',
+  figma = '/figma',
 }

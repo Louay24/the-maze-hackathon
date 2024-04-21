@@ -1,35 +1,42 @@
-.pain_option{
-    display:  flex;
+@import './Calculator/calc';
+@import "./Chart/chart";
+
+.pain_option {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    &__title{
+
+    &__title {
         font-size: 2rem;
         font-weight: 700;
         color: rgb(0, 166, 255);
     }
-.title{
-    font-size: 1.5rem;
-    font-weight: 700;
+
+    .title {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    img {
+        width: 5rem;
+    }
 }
-img{
-    width: 5rem;
-}
-}
-.pain_options{
+
+.pain_options {
     width: 100%;
-    display:  flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
 }
-.form-wrapper{
+
+.form-wrapper {
     width: 100%;
-    display:  flex;
+    display: flex;
     flex-direction: column;
     justify-content: start;
     gap: 3rem;
 
 }
-@import './Calculator/calc'

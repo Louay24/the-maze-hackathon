@@ -53,7 +53,12 @@ export const Layout = ({ children }: { children: ReactNode }) => {
       }
     });
   const items = mainLayoutRoutes
-    ?.filter((el) => el.showInMenu && el?.theme === themeParams?.get('theme'))
+    ?.filter(
+      (el) =>
+        el.showInMenu &&
+        (el?.theme === themeParams?.get('theme') ||
+          el.label === 'UI/UX challenges')
+    )
     .map(({ icon, path, label, suffix, theme }) => {
       const labelItem = (
         <div className="main_layout-sider-label">
