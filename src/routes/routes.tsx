@@ -11,6 +11,8 @@ import C18 from 'src/features/Challange_1';
 import { Chart } from 'src/pages/Chart';
 import { Calculator } from 'src/pages/Calculator';
 import C82 from 'src/features/Challange_82';
+import C72 from 'src/features/Challange_72';
+import C150 from 'src/features/Challange_150';
 import { MemesPage } from 'src/pages/MemesPage';
 import { Figma } from 'src/pages/Figma';
 export const routes: Route[] = [
@@ -44,6 +46,24 @@ export const routes: Route[] = [
         theme: themes.healthCare,
         label: '#82',
         component: C82,
+        icon: <MdOutlineDashboardCustomize />,
+      },
+      {
+        path: Paths.Project72,
+        guard: 'public',
+        showInMenu: true,
+        theme: themes.healthCare,
+        label: '#72',
+        component: C72,
+        icon: <MdOutlineDashboardCustomize />,
+      },
+      {
+        path: Paths.Project150,
+        guard: 'public',
+        showInMenu: true,
+        theme: themes.industry,
+        label: '#150',
+        component: C150,
         icon: <MdOutlineDashboardCustomize />,
       },
       {
