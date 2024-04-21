@@ -13,6 +13,7 @@ import { Calculator } from 'src/pages/Calculator';
 import C82 from 'src/features/Challange_82';
 import { MemesPage } from 'src/pages/MemesPage';
 import { Figma } from 'src/pages/Figma';
+import { WorldClock } from 'src/pages/WorldClock';
 export const routes: Route[] = [
   {
     guard: 'public',
@@ -80,6 +81,15 @@ export const routes: Route[] = [
         theme: themes.bi,
         label: 'UI/UX challenges',
         component: Figma,
+        icon: <MdOutlineDashboardCustomize />,
+      },
+      {
+        path: Paths.worldClock,
+        guard: 'public',
+        showInMenu: true,
+        theme: themes.industry,
+        label: 'World Clock',
+        component: WorldClock,
         icon: <MdOutlineDashboardCustomize />,
       },
     ],
