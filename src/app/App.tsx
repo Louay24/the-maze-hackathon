@@ -19,9 +19,10 @@ export const App = () => {
   const { selectedLanguage } = useLanguage();
   const direction = selectedLanguage === Languages.AR ? 'rtl' : 'ltr';
   useEffect(()=>{
-    const token = localStorage.setItem('access_token','random_one')
-    socketManager._connectSocket()
-    socketManager._joinRoom('for_everyone')
+    const data = localStorage.getItem('medications')
+    if (!data) {
+      localStorage.setItem('medications',JSON.stringify([]))
+    }
   },[])
   return (
     <ConfigProvider

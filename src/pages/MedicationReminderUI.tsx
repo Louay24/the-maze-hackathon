@@ -10,7 +10,7 @@ function MedicationReminderUI() {
   const [name, setName] = useState('');
   const [dosage, setDosage] = useState('');
   const [schedule, setSchedule] = useState<any>('');
-  const [medications, setMedications] = useState<any>(JSON.parse(localStorage.getItem('medications') || '') || []);
+  const [medications, setMedications] = useState<any>([]);
   const [nearestMedication, setNearestMedication] = useState<any>(null);
 
   const [form] = useForm();
