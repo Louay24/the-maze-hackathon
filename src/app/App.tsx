@@ -10,12 +10,19 @@ import {
   Languages,
   useLanguage,
 } from 'src/providers/translation/LanguageContext';
+import { useEffect } from 'react';
+import socketManager from 'src/socket/socketManager';
 
 
 export const App = () => {
   const themeConfig = useThemeConfig();
   const { selectedLanguage } = useLanguage();
   const direction = selectedLanguage === Languages.AR ? 'rtl' : 'ltr';
+  useEffect(()=>{
+    const token = localStorage.setItem('access_token','random_one')
+    socketManager._connectSocket()
+    socketManager._joinRoom('for_everyone')
+  },[])
   return (
     <ConfigProvider
       direction={direction}

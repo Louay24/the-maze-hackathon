@@ -7,14 +7,14 @@ import { ChatIcon } from 'src/assets/icons/ChatIcon/ChatIcon';
 import { MdOutlineDashboardCustomize } from 'react-icons/md';
 
 import { Paths } from 'src/constants/paths';
+import MedicationReminderUI from 'src/pages/MedicationReminderUI';
 import C18 from 'src/features/Challange_1';
 import { Chart } from 'src/pages/Chart';
 import { Calculator } from 'src/pages/Calculator';
 import C82 from 'src/features/Challange_82';
-import C72 from 'src/features/Challange_72';
-import C150 from 'src/features/Challange_150';
 import { MemesPage } from 'src/pages/MemesPage';
 import { Figma } from 'src/pages/Figma';
+import { CalendarIcon } from 'src/assets/icons/CalendarIcon/CalendarIcon';
 export const routes: Route[] = [
   {
     guard: 'public',
@@ -49,22 +49,13 @@ export const routes: Route[] = [
         icon: <MdOutlineDashboardCustomize />,
       },
       {
-        path: Paths.Project72,
+        path: Paths.Project5,
         guard: 'public',
         showInMenu: true,
         theme: themes.healthCare,
-        label: '#72',
-        component: C72,
-        icon: <MdOutlineDashboardCustomize />,
-      },
-      {
-        path: Paths.Project150,
-        guard: 'public',
-        showInMenu: true,
-        theme: themes.industry,
-        label: '#150',
-        component: C150,
-        icon: <MdOutlineDashboardCustomize />,
+        label: 'MedicationReminderUI',
+        component: MedicationReminderUI,
+        icon: <CalendarIcon />,
       },
       {
         path: Paths.chart,
