@@ -12,6 +12,10 @@ export const Figma = () => {
       challenge: 16,
       link: 'https://www.figma.com/file/ENr7uHO9xGiNFLKntbZnFn/Intuitive-Fitness-Tracking-App-UI-Design?type=design&node-id=0-1&mode=design&t=ZSrH8rncDWsAztLG-0',
     },
+    {
+      challenge: 64,
+      link: 'https://www.figma.com/file/ACzs7ViYggstkxG89taOsZ/Smart-Factory-Control-Room-Interface?type=design&node-id=0-1&mode=design&t=RlEiCxtYkxw8V579-0'
+    }
   ];
   return (
     <div style={{ display: 'flex', gap: '1rem' }}>
@@ -19,7 +23,7 @@ export const Figma = () => {
         <a target="_blank" href={link.link} rel="noreferrer">
           {link.challenge}
         </a>
-      ))}{' '}
+      ))}
     </div>
   );
 };

@@ -4,7 +4,7 @@ export enum Paths {
   Project2 = '/project2',
   Project3 = '/project3',
   Project4 = '/project4',
-  Project5 = '/project5',
+  Project5 = '/medication-reminder',
   Project6 = '/project6',
   Project7 = '/project7',
   calculator = '/80',
@@ -15,4 +15,5 @@ export enum Paths {
   chart = '/111',
   memes = '/69',
   figma = '/figma',
+  worldClock = '/61',
 }

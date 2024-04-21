@@ -10,12 +10,20 @@ import {
   Languages,
   useLanguage,
 } from 'src/providers/translation/LanguageContext';
+import { useEffect } from 'react';
+import socketManager from 'src/socket/socketManager';
 
 
 export const App = () => {
   const themeConfig = useThemeConfig();
   const { selectedLanguage } = useLanguage();
   const direction = selectedLanguage === Languages.AR ? 'rtl' : 'ltr';
+  useEffect(()=>{
+    const data = localStorage.getItem('medications')
+    if (!data) {
+      localStorage.setItem('medications',JSON.stringify([]))
+    }
+  },[])
   return (
     <ConfigProvider
       direction={direction}
