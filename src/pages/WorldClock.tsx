@@ -16,7 +16,7 @@ export const WorldClock = () => {
         setTimes(response.zones[0]);
       })
       .catch((err) => {
-        message.error('error occured check network');
+        message.error('Too Many Requests');
       });
   };
   useEffect(() => {
